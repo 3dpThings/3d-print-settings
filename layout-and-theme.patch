@@ -1,0 +1,302 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 8bf10ec..dc16bdb 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -4,6 +4,9 @@ All notable changes to this project are listed here. Versions follow [semantic v
+ 
+ ## [Unreleased]
+ 
++- Light/dark theme selector (System, Light, Dark) in the header; System follows the operating system setting.
++- Wide screens: sections 01–04 come first again, with Printer and Filament side by side, and the settings below.
++
+ ## [1.0.0] - 2026-11-23
+ 
+ First public release.
+diff --git a/README.md b/README.md
+index f4a04de..6811fe7 100644
+--- a/README.md
++++ b/README.md
+@@ -17,6 +17,7 @@ Pick a printer, a filament (for example *Sunlu PETG* or *Bambu Lab PA6-CF*) and
+ - **Live results**: everything recalculates as you change a selection.
+ - **Exports**: full text sheet, OrcaSlicer / Bambu Studio filament profile (.json) and PrusaSlicer config (.ini).
+ - **Your last 10 queries**, kept in your browser only.
++- **Light and dark theme**, following your system setting or chosen by hand.
+ - **9 languages**: English, 中文, Deutsch, 日本語, Español, Français, Português, Italiano, 한국어.
+ 
+ ## Run it locally
+@@ -48,7 +49,7 @@ js/i18n.js              Translation loader and T() helper
+ js/config.js            Site settings (repository URL for the footer links)
+ js/data/                Catalogue: printers, filaments, material classes, print types, support materials
+ js/engine/              Calculations: settings, warnings, tips, printer and nozzle suggestions
+-js/ui/                  Form, results sheet, exports, history, language switch, searchable dropdown
++js/ui/                  Form, results sheet, exports, history, language and theme switches, searchable dropdown
+ js/main.js              Event wiring and start-up
+ i18n/<lang>.json        UI strings and tips, one file per language
+ scripts/check.mjs       Data, translation and engine checks (no dependencies)
+diff --git a/css/styles.css b/css/styles.css
+index f7fa451..bd06427 100644
+--- a/css/styles.css
++++ b/css/styles.css
+@@ -67,11 +67,6 @@ button,select,input{font:inherit;color:inherit}
+ 
+ .app{max-width:1400px;margin:0 auto;padding:16px 24px 40px;display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:start}
+ .main-col{display:grid;gap:16px;min-width:0}
+-@media (min-width: 1180px){
+-  .main-col{grid-template-columns:minmax(380px,460px) minmax(0,1fr);align-items:start}
+-  .main-col > .sheet{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;padding-right:4px}
+-  .main-col .types{grid-template-columns:1fr}
+-}
+ @media (max-width: 980px){ .app{padding:12px 16px 32px} .top-inner{padding:18px 16px 14px} .recentwrap{padding:12px 16px 0} }
+ 
+ .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+@@ -114,6 +109,13 @@ select:hover{border-color:var(--muted)}
+ 
+ .steps{padding:0}
+ .step-sec{padding:16px 18px;border-top:1px solid var(--line)}
++@media (min-width: 980px){
++  /* Printer and filament side by side; print type and suggestions full width */
++  .steps{display:grid;grid-template-columns:1fr 1fr}
++  .steps > .step-sec{grid-column:1 / -1}
++  .steps > .step-sec:nth-child(1){grid-column:1}
++  .steps > .step-sec:nth-child(2){grid-column:2;border-top:0;border-left:1px solid var(--line)}
++}
+ .step-sec:first-child{border-top:0}
+ .step-sec h2{margin-bottom:10px}
+ .row2.w{grid-template-columns:repeat(2,minmax(0,260px))}
+diff --git a/i18n/de.json b/i18n/de.json
+index 1edfac2..5223964 100644
+--- a/i18n/de.json
++++ b/i18n/de.json
+@@ -591,5 +591,9 @@
+   "ft.oss": "Freies Open-Source-Community-Projekt (MIT-Lizenz).",
+   "ft.trademarks": "Marken- und Produktnamen gehören ihren Inhabern; dieses Projekt ist mit keinem Hersteller verbunden.",
+   "ft.repo": "Quellcode",
+-  "ft.contribute": "Drucker oder Filament vorschlagen"
++  "ft.contribute": "Drucker oder Filament vorschlagen",
++  "theme.label": "Design",
++  "theme.system": "System",
++  "theme.light": "Hell",
++  "theme.dark": "Dunkel"
+ }
+diff --git a/i18n/en.json b/i18n/en.json
+index 75dd78c..f48292a 100644
+--- a/i18n/en.json
++++ b/i18n/en.json
+@@ -591,5 +591,9 @@
+   "ft.oss": "Free, open-source community project (MIT licence).",
+   "ft.trademarks": "Brand and product names are trademarks of their owners; this project isn't affiliated with any manufacturer.",
+   "ft.repo": "Source code",
+-  "ft.contribute": "Suggest a printer or filament"
++  "ft.contribute": "Suggest a printer or filament",
++  "theme.label": "Theme",
++  "theme.system": "System",
++  "theme.light": "Light",
++  "theme.dark": "Dark"
+ }
+diff --git a/i18n/es.json b/i18n/es.json
+index e07b748..3485681 100644
+--- a/i18n/es.json
++++ b/i18n/es.json
+@@ -591,5 +591,9 @@
+   "ft.oss": "Proyecto comunitario libre y de código abierto (licencia MIT).",
+   "ft.trademarks": "Las marcas y nombres de producto pertenecen a sus propietarios; este proyecto no está afiliado a ningún fabricante.",
+   "ft.repo": "Código fuente",
+-  "ft.contribute": "Sugerir una impresora o filamento"
++  "ft.contribute": "Sugerir una impresora o filamento",
++  "theme.label": "Tema",
++  "theme.system": "Sistema",
++  "theme.light": "Claro",
++  "theme.dark": "Oscuro"
+ }
+diff --git a/i18n/fr.json b/i18n/fr.json
+index 9aff7c9..a2c9905 100644
+--- a/i18n/fr.json
++++ b/i18n/fr.json
+@@ -591,5 +591,9 @@
+   "ft.oss": "Projet communautaire libre et open source (licence MIT).",
+   "ft.trademarks": "Les noms de marques et de produits appartiennent à leurs propriétaires ; ce projet n'est affilié à aucun fabricant.",
+   "ft.repo": "Code source",
+-  "ft.contribute": "Proposer une imprimante ou un filament"
++  "ft.contribute": "Proposer une imprimante ou un filament",
++  "theme.label": "Thème",
++  "theme.system": "Système",
++  "theme.light": "Clair",
++  "theme.dark": "Sombre"
+ }
+diff --git a/i18n/it.json b/i18n/it.json
+index 0a1103a..e5f60a3 100644
+--- a/i18n/it.json
++++ b/i18n/it.json
+@@ -591,5 +591,9 @@
+   "ft.oss": "Progetto comunitario libero e open source (licenza MIT).",
+   "ft.trademarks": "I nomi di marchi e prodotti appartengono ai rispettivi proprietari; questo progetto non è affiliato ad alcun produttore.",
+   "ft.repo": "Codice sorgente",
+-  "ft.contribute": "Suggerisci una stampante o un filamento"
++  "ft.contribute": "Suggerisci una stampante o un filamento",
++  "theme.label": "Tema",
++  "theme.system": "Sistema",
++  "theme.light": "Chiaro",
++  "theme.dark": "Scuro"
+ }
+diff --git a/i18n/ja.json b/i18n/ja.json
+index 994bb86..f819f9e 100644
+--- a/i18n/ja.json
++++ b/i18n/ja.json
+@@ -591,5 +591,9 @@
+   "ft.oss": "無料のオープンソース・コミュニティプロジェクトです（MITライセンス）。",
+   "ft.trademarks": "ブランド名・製品名は各所有者の商標です。本プロジェクトはどのメーカーとも提携していません。",
+   "ft.repo": "ソースコード",
+-  "ft.contribute": "プリンターやフィラメントを提案"
++  "ft.contribute": "プリンターやフィラメントを提案",
++  "theme.label": "テーマ",
++  "theme.system": "システム",
++  "theme.light": "ライト",
++  "theme.dark": "ダーク"
+ }
+diff --git a/i18n/ko.json b/i18n/ko.json
+index dffeb9b..eb6c988 100644
+--- a/i18n/ko.json
++++ b/i18n/ko.json
+@@ -591,5 +591,9 @@
+   "ft.oss": "무료 오픈 소스 커뮤니티 프로젝트입니다(MIT 라이선스).",
+   "ft.trademarks": "브랜드와 제품명은 각 소유자의 상표이며, 이 프로젝트는 어떤 제조사와도 제휴하지 않습니다.",
+   "ft.repo": "소스 코드",
+-  "ft.contribute": "프린터나 필라멘트 제안하기"
++  "ft.contribute": "프린터나 필라멘트 제안하기",
++  "theme.label": "테마",
++  "theme.system": "시스템",
++  "theme.light": "라이트",
++  "theme.dark": "다크"
+ }
+diff --git a/i18n/pt.json b/i18n/pt.json
+index 0271fed..b5c4b66 100644
+--- a/i18n/pt.json
++++ b/i18n/pt.json
+@@ -591,5 +591,9 @@
+   "ft.oss": "Projeto comunitário livre e de código aberto (licença MIT).",
+   "ft.trademarks": "Marcas e nomes de produtos pertencem aos seus donos; este projeto não é afiliado a nenhum fabricante.",
+   "ft.repo": "Código-fonte",
+-  "ft.contribute": "Sugerir uma impressora ou filamento"
++  "ft.contribute": "Sugerir uma impressora ou filamento",
++  "theme.label": "Tema",
++  "theme.system": "Sistema",
++  "theme.light": "Claro",
++  "theme.dark": "Escuro"
+ }
+diff --git a/i18n/zh.json b/i18n/zh.json
+index b88cbc4..4c83126 100644
+--- a/i18n/zh.json
++++ b/i18n/zh.json
+@@ -591,5 +591,9 @@
+   "ft.oss": "免费开源的社区项目（MIT 许可证）。",
+   "ft.trademarks": "品牌和产品名称归其各自所有者所有；本项目与任何制造商均无关联。",
+   "ft.repo": "源代码",
+-  "ft.contribute": "建议添加打印机或耗材"
++  "ft.contribute": "建议添加打印机或耗材",
++  "theme.label": "主题",
++  "theme.system": "跟随系统",
++  "theme.light": "浅色",
++  "theme.dark": "深色"
+ }
+diff --git a/index.html b/index.html
+index 28095d7..9d8587e 100644
+--- a/index.html
++++ b/index.html
+@@ -11,6 +11,7 @@
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/styles.css">
++<script>/* apply a saved light/dark choice before the page paints */try{var t=localStorage.getItem('p3d.theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+ </head>
+ <body>
+ <header class="top">
+@@ -21,6 +22,7 @@
+     </div>
+     <div class="top-right">
+       <span class="legend" data-i18n="app.legend"></span>
++      <div class="langpick"><label for="theme" data-i18n="theme.label"></label><select id="theme"></select></div>
+       <div class="langpick"><label for="lang" data-i18n="lang.label"></label><select id="lang"></select></div>
+     </div>
+   </div>
+@@ -129,6 +131,7 @@
+ <script src="js/ui/export.js"></script>
+ <script src="js/ui/history.js"></script>
+ <script src="js/ui/language.js"></script>
++<script src="js/ui/theme.js"></script>
+ <script src="js/ui/combo.js"></script>
+ <script src="js/config.js"></script>
+ <script src="js/main.js"></script>
+diff --git a/js/main.js b/js/main.js
+index 52186d2..cbff91c 100644
+--- a/js/main.js
++++ b/js/main.js
+@@ -133,6 +133,8 @@ function initForm(){
+   refreshSuggestion(true);
+ }
+ 
++$('theme').addEventListener('change', e => setTheme(e.target.value));
++
+ /* Start-up: load English (and the saved language) before drawing anything. */
+ async function boot(){
+   let saved = null;
+@@ -143,6 +145,7 @@ async function boot(){
+     try { DICT = await loadDict(saved); LANG = LANGS.find(l => l.code===saved); } catch(e){ console.warn(e); }
+   }
+   fillSelect($('lang'), LANGS.map(l => [l.code, l.name]), LANG.code);
++  fillThemeSelect();
+   if (CONFIG.repoUrl){
+     const base = CONFIG.repoUrl.replace(/\/+$/, '');
+     $('repoLink').href = base; $('repoLink').hidden = false;
+diff --git a/js/ui/history.js b/js/ui/history.js
+index 633fd12..034106d 100644
+--- a/js/ui/history.js
++++ b/js/ui/history.js
+@@ -48,7 +48,7 @@ function histPick(i){
+   setForm(e);
+   histChosen = keyOf(e);
+   render(readForm(), {fromHistory:true, ts:e.ts});
+-  if (!matchMedia('(min-width: 1180px)').matches) scrollToSheet();
++  scrollToSheet();
+ }
+ $('histBtn').addEventListener('click', () => histOpen($('hist').hidden));
+ $('histBtn').addEventListener('keydown', ev => { if (ev.key==='ArrowDown'){ ev.preventDefault(); histOpen(true); } });
+diff --git a/js/ui/language.js b/js/ui/language.js
+index bb32637..3cff4d1 100644
+--- a/js/ui/language.js
++++ b/js/ui/language.js
+@@ -11,6 +11,7 @@ function applyStatic(){
+ function rerenderAll(){
+   const q = readForm();
+   applyStatic();
++  fillThemeSelect();
+   fillFilamentBrands($('fBrand').value);
+   renderTypes(q.t);
+   const p = byId(PRINTERS, q.p), f = byId(FILAMENTS, q.f);
+diff --git a/js/ui/theme.js b/js/ui/theme.js
+new file mode 100644
+index 0000000..4529e0a
+--- /dev/null
++++ b/js/ui/theme.js
+@@ -0,0 +1,22 @@
++/* Colour theme
++   'system' (default) follows the operating system's light/dark setting; 'light' and 'dark' force one. */
++'use strict';
++
++const LS_THEME = 'p3d.theme';
++const THEMES = ['system', 'light', 'dark'];
++
++function savedTheme(){
++  try { const t = localStorage.getItem(LS_THEME); return THEMES.includes(t) ? t : 'system'; } catch(e){ return 'system'; }
++}
++function applyTheme(t){
++  if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
++  else delete document.documentElement.dataset.theme;
++}
++function fillThemeSelect(){
++  fillSelect($('theme'), THEMES.map(t => [t, T('theme.' + t)]), savedTheme());
++}
++function setTheme(t){
++  if (!THEMES.includes(t)) t = 'system';
++  try { if (t === 'system') localStorage.removeItem(LS_THEME); else localStorage.setItem(LS_THEME, t); } catch(e){}
++  applyTheme(t);
++}
