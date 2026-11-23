@@ -4,6 +4,9 @@ All notable changes to this project are listed here. Versions follow [semantic v
 
 ## [Unreleased]
 
+- Light/dark theme selector (System, Light, Dark) in the header; System follows the operating system setting.
+- Wide screens: sections 01–04 come first again, with Printer and Filament side by side, and the settings below.
+
 ## [1.0.0] - 2026-11-23
 
 First public release.

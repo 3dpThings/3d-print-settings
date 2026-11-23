@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<script>/* apply a saved light/dark choice before the page paints */try{var t=localStorage.getItem('p3d.theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
 <header class="top">
@@ -21,6 +22,7 @@
     </div>
     <div class="top-right">
       <span class="legend" data-i18n="app.legend"></span>
+      <div class="langpick"><label for="theme" data-i18n="theme.label"></label><select id="theme"></select></div>
       <div class="langpick"><label for="lang" data-i18n="lang.label"></label><select id="lang"></select></div>
     </div>
   </div>
@@ -129,6 +131,7 @@
 <script src="js/ui/export.js"></script>
 <script src="js/ui/history.js"></script>
 <script src="js/ui/language.js"></script>
+<script src="js/ui/theme.js"></script>
 <script src="js/ui/combo.js"></script>
 <script src="js/config.js"></script>
 <script src="js/main.js"></script>

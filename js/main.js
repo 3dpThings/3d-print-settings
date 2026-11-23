@@ -133,6 +133,8 @@ function initForm(){
   refreshSuggestion(true);
 }
 
+$('theme').addEventListener('change', e => setTheme(e.target.value));
+
 /* Start-up: load English (and the saved language) before drawing anything. */
 async function boot(){
   let saved = null;
@@ -143,6 +145,7 @@ async function boot(){
     try { DICT = await loadDict(saved); LANG = LANGS.find(l => l.code===saved); } catch(e){ console.warn(e); }
   }
   fillSelect($('lang'), LANGS.map(l => [l.code, l.name]), LANG.code);
+  fillThemeSelect();
   if (CONFIG.repoUrl){
     const base = CONFIG.repoUrl.replace(/\/+$/, '');
     $('repoLink').href = base; $('repoLink').hidden = false;

@@ -48,7 +48,7 @@ function histPick(i){
   setForm(e);
   histChosen = keyOf(e);
   render(readForm(), {fromHistory:true, ts:e.ts});
-  if (!matchMedia('(min-width: 1180px)').matches) scrollToSheet();
+  scrollToSheet();
 }
 $('histBtn').addEventListener('click', () => histOpen($('hist').hidden));
 $('histBtn').addEventListener('keydown', ev => { if (ev.key==='ArrowDown'){ ev.preventDefault(); histOpen(true); } });

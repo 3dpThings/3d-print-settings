@@ -11,6 +11,7 @@ function applyStatic(){
 function rerenderAll(){
   const q = readForm();
   applyStatic();
+  fillThemeSelect();
   fillFilamentBrands($('fBrand').value);
   renderTypes(q.t);
   const p = byId(PRINTERS, q.p), f = byId(FILAMENTS, q.f);
