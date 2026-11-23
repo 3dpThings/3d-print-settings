@@ -1,0 +1,35 @@
+name: Add a filament
+description: Request a filament (brand + product) that isn't in the list yet.
+title: "[Filament] "
+labels: ["filament", "data"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Brand and product
+      placeholder: Jayo PETG
+    validations:
+      required: true
+  - type: input
+    id: tds
+    attributes:
+      label: Technical data sheet or product page
+      description: A link to the manufacturer's data sheet (TDS), product page or official slicer profile.
+    validations:
+      required: true
+  - type: textarea
+    id: values
+    attributes:
+      label: Printing values
+      value: |
+        - Nozzle temperature range:
+        - Bed temperature range:
+        - Max volumetric speed (if published):
+        - Abrasive (CF / GF / glow / other particles)?:
+        - Drying recommendation:
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Contribution
+      options:
+        - label: I'd like to add it myself in a pull request.

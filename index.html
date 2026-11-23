@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D Print Settings</title>
+<meta name="description" content="Slicer settings for your exact 3D printer, filament and type of part: temperatures, speeds, layer heights, nozzles, support material and printer-specific tips.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23d9480f'/%3E%3Cpath d='M7 23h18M9 18h14M11 13h10M13 8h6' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <h1 id="h1"></h1><br>
+      <p data-i18n="app.lead"></p>
+    </div>
+    <div class="top-right">
+      <span class="legend" data-i18n="app.legend"></span>
+      <div class="langpick"><label for="lang" data-i18n="lang.label"></label><select id="lang"></select></div>
+    </div>
+  </div>
+</header>
+
+<div class="recentwrap">
+  <section class="recentbar" aria-labelledby="histTitle">
+    <span class="recent-title" id="histTitle" data-i18n="h.title"></span>
+    <div class="histdd">
+      <button type="button" class="histbtn" id="histBtn" aria-haspopup="listbox" aria-expanded="false" aria-controls="hist"><span id="histBtnLabel"></span></button>
+      <div class="histpop" id="hist" role="listbox" aria-labelledby="histTitle" tabindex="-1" hidden></div>
+    </div>
+    <button class="linkbtn" id="clearHist" type="button" hidden></button>
+  </section>
+</div>
+
+<noscript><p class="boot-error">This app needs JavaScript.</p></noscript>
+<p class="boot-error" id="bootError" hidden>Couldn't load the translation files. If you opened index.html straight from disk, serve the folder instead: <code>npx serve .</code> or <code>python3 -m http.server</code>.</p>
+
+<main class="app">
+  <div class="main-col">
+    <form class="panel steps" id="form" autocomplete="off">
+      <section class="step-sec">
+        <h2><span><span class="step">01</span><span data-i18n="f.printer"></span></span></h2>
+        <div class="row2 w">
+          <div class="field"><label for="pBrand" data-i18n="f.brand"></label><select id="pBrand"></select></div>
+          <div class="field"><label for="pModel" data-i18n="f.model"></label><select id="pModel"></select></div>
+        </div>
+        <p class="spec-line" id="pSpec"></p>
+      </section>
+
+      <section class="step-sec">
+        <h2><span><span class="step">02</span><span data-i18n="f.filament"></span></span></h2>
+        <div class="row2 w">
+          <div class="field"><label for="fBrand" data-i18n="f.brand"></label><select id="fBrand"></select></div>
+          <div class="field"><label for="fNameInput" data-i18n="f.material"></label>
+            <div class="combo"><input id="fNameInput" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="fList" autocomplete="off" spellcheck="false"><ul class="combo-list" id="fList" role="listbox" hidden></ul></div>
+            <select id="fName" hidden tabindex="-1" aria-hidden="true"></select></div>
+        </div>
+        <p class="spec-line" id="fSpec"></p>
+        <p class="dry-line" id="fDry" aria-live="polite"></p>
+      </section>
+
+      <section class="step-sec">
+        <h2><span><span class="step">03</span><span id="typeLbl" data-i18n="f.type"></span></span></h2>
+        <div class="types" id="types" role="radiogroup" aria-labelledby="typeLbl"></div>
+      </section>
+
+      <section class="step-sec suggest" aria-labelledby="sugTitle">
+        <h2 id="sugTitle"><span><span class="step">04</span><span data-i18n="f.suggest"></span></span><span class="sugbadge" data-i18n="sug.badge"></span></h2>
+        <p class="sugintro" data-i18n="sug.intro"></p>
+        <div class="sug-grid">
+          <div class="field">
+            <span class="lbl" id="nozLbl" data-i18n="f.nozzle"></span>
+            <div class="seg ntype" id="nozTypes" role="radiogroup" aria-label="Type"></div>
+            <div class="seg" id="nozzles" role="radiogroup" aria-labelledby="nozLbl"></div>
+            <p class="spec-line" id="nozHint"></p>
+          </div>
+          <div class="field" id="lhField">
+            <span class="lbl" id="lhLbl" data-i18n="f.lh"></span>
+            <div class="seg" id="lhs" role="radiogroup" aria-labelledby="lhLbl"></div>
+            <p class="spec-line" id="lhHint"></p>
+          </div>
+          <div class="field" id="supField" hidden>
+            <label for="sNameInput" data-i18n="f.support"></label>
+            <div class="combo"><input id="sNameInput" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="sList" autocomplete="off" spellcheck="false"><ul class="combo-list" id="sList" role="listbox" hidden></ul></div>
+            <select id="sName" hidden tabindex="-1" aria-hidden="true"></select>
+            <p class="spec-line" id="sSpec"></p>
+          </div>
+          <div class="field" id="supNozField" hidden>
+            <span class="lbl" id="supNozLbl" data-i18n="f.supNozzle"></span>
+            <div class="seg ntype" id="supNozTypes" role="radiogroup" aria-label="Type"></div>
+            <div class="seg" id="supNozzles" role="radiogroup" aria-labelledby="supNozLbl"></div>
+            <p class="spec-line" id="supNozHint"></p>
+          </div>
+        </div>
+        <div class="sugprinter">
+          <p class="sugwhy" id="sugWhy"></p>
+          <div class="alts" id="sugAlts"></div>
+        </div>
+      </section>
+    </form>
+
+    <div class="sheet" id="sheet" hidden></div>
+  </div>
+
+</main>
+<footer class="site-foot">
+  <span data-i18n="ft.oss"></span>
+  <span data-i18n="ft.trademarks"></span>
+  <a id="repoLink" href="#" hidden data-i18n="ft.repo"></a>
+  <a id="issueLink" href="#" hidden data-i18n="ft.contribute"></a>
+</footer>
+<script src="js/i18n.js"></script>
+<script src="js/engine/helpers.js"></script>
+<script src="js/data/printers.js"></script>
+<script src="js/data/materials.js"></script>
+<script src="js/data/filaments.js"></script>
+<script src="js/data/types.js"></script>
+<script src="js/data/supports.js"></script>
+<script src="js/engine/suggest.js"></script>
+<script src="js/engine/tips.js"></script>
+<script src="js/engine/compute.js"></script>
+<script src="js/ui/form.js"></script>
+<script src="js/ui/render.js"></script>
+<script src="js/ui/export.js"></script>
+<script src="js/ui/history.js"></script>
+<script src="js/ui/language.js"></script>
+<script src="js/ui/combo.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

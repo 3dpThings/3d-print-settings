@@ -1,0 +1,29 @@
+name: Settings didn't work for me
+description: Report a value that gave bad results, and what worked instead.
+title: "[Settings] "
+labels: ["settings-feedback"]
+body:
+  - type: input
+    id: combo
+    attributes:
+      label: Printer, filament, print type and nozzle
+      placeholder: Bambu Lab A1 · Sunlu PETG · Engineering part · 0.4 mm hardened
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What went wrong
+      description: Stringing, warping, poor layer adhesion, clogging… Photos help a lot.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: What worked instead
+      description: The values you changed, and how you tested them (temperature tower, flow test…).
+  - type: input
+    id: slicer
+    attributes:
+      label: Slicer and version
+      placeholder: OrcaSlicer 2.3

@@ -1,0 +1,13 @@
+{
+  "name": "3d-print-settings",
+  "version": "1.0.0",
+  "description": "Slicer settings for your exact 3D printer, filament and type of part.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "start": "npx --yes serve ."
+  }
+}

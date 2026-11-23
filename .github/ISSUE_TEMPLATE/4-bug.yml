@@ -1,0 +1,31 @@
+name: Bug report
+description: Something in the app doesn't work or looks wrong.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Choose printer …
+        2. Choose filament …
+        3. …
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Browser, device and app language
+      placeholder: Firefox 140 on Windows 11, Spanish
+  - type: textarea
+    id: console
+    attributes:
+      label: Errors in the browser console (optional)
+      render: text

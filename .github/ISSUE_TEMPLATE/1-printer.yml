@@ -1,0 +1,38 @@
+name: Add a printer
+description: Request a printer that isn't in the list yet.
+title: "[Printer] "
+labels: ["printer", "data"]
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Brand and model
+      placeholder: Creality K2 Pro
+    validations:
+      required: true
+  - type: textarea
+    id: specs
+    attributes:
+      label: Specifications
+      description: Whatever you know. Links to the official spec page are the most useful.
+      value: |
+        - Official spec page:
+        - Max nozzle / bed temperature:
+        - Enclosure (open, enclosed, heated chamber up to … °C):
+        - Extruder (direct drive / bowden):
+        - Stock nozzle (brass, stainless, hardened, high flow) and available sizes:
+        - Build volume:
+        - Number of tools / tool changer:
+    validations:
+      required: true
+  - type: textarea
+    id: tips
+    attributes:
+      label: Printer-specific tips (optional)
+      description: Quirks worth knowing, for example "wait 5 minutes after the bed reports 60 °C before printing ABS".
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Contribution
+      options:
+        - label: I'd like to add it myself in a pull request.
