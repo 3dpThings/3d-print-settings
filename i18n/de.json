@@ -591,5 +591,9 @@
   "ft.oss": "Freies Open-Source-Community-Projekt (MIT-Lizenz).",
   "ft.trademarks": "Marken- und Produktnamen gehören ihren Inhabern; dieses Projekt ist mit keinem Hersteller verbunden.",
   "ft.repo": "Quellcode",
-  "ft.contribute": "Drucker oder Filament vorschlagen"
+  "ft.contribute": "Drucker oder Filament vorschlagen",
+  "theme.label": "Design",
+  "theme.system": "System",
+  "theme.light": "Hell",
+  "theme.dark": "Dunkel"
 }

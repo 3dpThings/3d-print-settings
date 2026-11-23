@@ -591,5 +591,9 @@
   "ft.oss": "免费开源的社区项目（MIT 许可证）。",
   "ft.trademarks": "品牌和产品名称归其各自所有者所有；本项目与任何制造商均无关联。",
   "ft.repo": "源代码",
-  "ft.contribute": "建议添加打印机或耗材"
+  "ft.contribute": "建议添加打印机或耗材",
+  "theme.label": "主题",
+  "theme.system": "跟随系统",
+  "theme.light": "浅色",
+  "theme.dark": "深色"
 }

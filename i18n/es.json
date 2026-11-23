@@ -591,5 +591,9 @@
   "ft.oss": "Proyecto comunitario libre y de código abierto (licencia MIT).",
   "ft.trademarks": "Las marcas y nombres de producto pertenecen a sus propietarios; este proyecto no está afiliado a ningún fabricante.",
   "ft.repo": "Código fuente",
-  "ft.contribute": "Sugerir una impresora o filamento"
+  "ft.contribute": "Sugerir una impresora o filamento",
+  "theme.label": "Tema",
+  "theme.system": "Sistema",
+  "theme.light": "Claro",
+  "theme.dark": "Oscuro"
 }

@@ -591,5 +591,9 @@
   "ft.oss": "무료 오픈 소스 커뮤니티 프로젝트입니다(MIT 라이선스).",
   "ft.trademarks": "브랜드와 제품명은 각 소유자의 상표이며, 이 프로젝트는 어떤 제조사와도 제휴하지 않습니다.",
   "ft.repo": "소스 코드",
-  "ft.contribute": "프린터나 필라멘트 제안하기"
+  "ft.contribute": "프린터나 필라멘트 제안하기",
+  "theme.label": "테마",
+  "theme.system": "시스템",
+  "theme.light": "라이트",
+  "theme.dark": "다크"
 }

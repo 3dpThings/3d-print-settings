@@ -17,6 +17,7 @@ Pick a printer, a filament (for example *Sunlu PETG* or *Bambu Lab PA6-CF*) and 
 - **Live results**: everything recalculates as you change a selection.
 - **Exports**: full text sheet, OrcaSlicer / Bambu Studio filament profile (.json) and PrusaSlicer config (.ini).
 - **Your last 10 queries**, kept in your browser only.
+- **Light and dark theme**, following your system setting or chosen by hand.
 - **9 languages**: English, 中文, Deutsch, 日本語, Español, Français, Português, Italiano, 한국어.
 
 ## Run it locally
@@ -48,7 +49,7 @@ js/i18n.js              Translation loader and T() helper
 js/config.js            Site settings (repository URL for the footer links)
 js/data/                Catalogue: printers, filaments, material classes, print types, support materials
 js/engine/              Calculations: settings, warnings, tips, printer and nozzle suggestions
-js/ui/                  Form, results sheet, exports, history, language switch, searchable dropdown
+js/ui/                  Form, results sheet, exports, history, language and theme switches, searchable dropdown
 js/main.js              Event wiring and start-up
 i18n/<lang>.json        UI strings and tips, one file per language
 scripts/check.mjs       Data, translation and engine checks (no dependencies)
