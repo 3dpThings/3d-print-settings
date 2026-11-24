@@ -637,5 +637,15 @@
     "Il absorbe l'humidité très vite : imprimez directement depuis un séchoir chauffant. Recuisez et conditionnez les pièces à l'humidité pour obtenir toute leur résistance."
   ],
   "dry.pvb": "50 °C · 12 h",
-  "plate.wf": "PEI lisse ou texturé avec colle en bâton (ou Magigoo PA) ; plateau à 50 °C maximum"
+  "plate.wf": "PEI lisse ou texturé avec colle en bâton (ou Magigoo PA) ; plateau à 50 °C maximum",
+  "cls.ABS_CF": "ABS chargé carbone",
+  "mt.ABS_CF": [
+    "La fibre de carbone le rend plus rigide et réduit le gauchissement par rapport à l'ABS standard, mais elle est abrasive : buse trempée, idéalement 0.6 mm.",
+    "Il émet du styrène comme l'ABS : enceinte fermée et ventilation."
+  ],
+  "cls.TPU_AERO": "TPU allégé moussant",
+  "mt.TPU_AERO": [
+    "TPU moussant : plus chaud signifie plus de mousse, des pièces plus souples et plus légères. Commencez avec un débit de ≈ 0.6 et calibrez-le à la température utilisée.",
+    "Imprimez lentement, avec peu ou pas de rétraction, et gardez-le sec ; il ne convient pas à la plupart des systèmes de type AMS."
+  ]
 }

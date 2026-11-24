@@ -637,5 +637,15 @@
     "It absorbs moisture very quickly: print straight from a heated dryer. Anneal and moisture-condition parts for full strength."
   ],
   "dry.pvb": "50 °C · 12 h",
-  "plate.wf": "Smooth or textured PEI with glue stick (or Magigoo PA); bed at 50 °C or below"
+  "plate.wf": "Smooth or textured PEI with glue stick (or Magigoo PA); bed at 50 °C or below",
+  "cls.ABS_CF": "carbon-fibre ABS",
+  "mt.ABS_CF": [
+    "Carbon fibre makes it stiffer and reduces warping compared with plain ABS, but it's abrasive: use a hardened nozzle, ideally 0.6 mm.",
+    "It emits styrene like ABS: closed chamber and ventilation."
+  ],
+  "cls.TPU_AERO": "foaming lightweight TPU",
+  "mt.TPU_AERO": [
+    "Foaming TPU: hotter means more foam, softer and lighter parts. Start with a flow ratio of ≈ 0.6 and calibrate at the temperature you'll use.",
+    "Print slowly with little or no retraction, and keep it dry; it isn't suitable for most AMS-type feeders."
+  ]
 }

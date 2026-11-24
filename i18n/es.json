@@ -637,5 +637,15 @@
     "Absorbe humedad muy rápido: imprime directamente desde un secador. Recuece y acondiciona con humedad las piezas para lograr toda su resistencia."
   ],
   "dry.pvb": "50 °C · 12 h",
-  "plate.wf": "PEI liso o texturizado con pegamento en barra (o Magigoo PA); cama a 50 °C o menos"
+  "plate.wf": "PEI liso o texturizado con pegamento en barra (o Magigoo PA); cama a 50 °C o menos",
+  "cls.ABS_CF": "ABS con fibra de carbono",
+  "mt.ABS_CF": [
+    "La fibra de carbono lo hace más rígido y reduce la deformación respecto al ABS normal, pero es abrasiva: usa boquilla endurecida, mejor de 0.6 mm.",
+    "Emite estireno como el ABS: cámara cerrada y ventilación."
+  ],
+  "cls.TPU_AERO": "TPU ligero espumante",
+  "mt.TPU_AERO": [
+    "TPU espumante: más temperatura significa más espuma y piezas más blandas y ligeras. Empieza con un flujo de ≈ 0.6 y calíbralo a la temperatura que vayas a usar.",
+    "Imprime despacio, con poca o ninguna retracción, y mantenlo seco; no es apto para la mayoría de alimentadores tipo AMS."
+  ]
 }

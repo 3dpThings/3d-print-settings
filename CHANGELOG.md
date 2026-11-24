@@ -8,6 +8,8 @@ All notable changes to this project are listed here. Versions follow [semantic v
 - New material classes: HT-PLA, HT-PLA-GF, CoPE, PVB, glow-in-the-dark PETG, elastic PETG (PETG/TPU), PC-ABS and Warp-Free nylon (cool bed, no heated chamber).
 - New support materials: Polymaker PolySupport for PLA, PolySupport for PA12, PolyDissolve S1, and Sunlu PVA.
 - Renamed Polymaker products to their current names (PolyTerra → Panchroma Matte, PolyMide PA6-CF → Fiberon PA6-CF20, PolyLite ASA → ASA).
+- eSun catalogue completed (33 new lines) and the Qidi catalogue added (34 lines), plus eSun PVA and Qidi S-White support.
+- New material classes: carbon-fibre ABS and foaming TPU (TPU Aero / TPU-LW).
 - Filaments with glow pigment are now flagged as abrasive in the filament summary.
 
 - Light/dark theme selector (System, Light, Dark) in the header; System follows the operating system setting.

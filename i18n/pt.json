@@ -637,5 +637,15 @@
     "Absorve umidade muito rápido: imprima direto de um secador aquecido. Faça recozimento e condicionamento de umidade nas peças para atingir a resistência total."
   ],
   "dry.pvb": "50 °C · 12 h",
-  "plate.wf": "PEI liso ou texturizado com cola em bastão (ou Magigoo PA); mesa a 50 °C ou menos"
+  "plate.wf": "PEI liso ou texturizado com cola em bastão (ou Magigoo PA); mesa a 50 °C ou menos",
+  "cls.ABS_CF": "ABS com fibra de carbono",
+  "mt.ABS_CF": [
+    "A fibra de carbono deixa o material mais rígido e reduz o empenamento em relação ao ABS comum, mas é abrasiva: use bico endurecido, de preferência 0.6 mm.",
+    "Emite estireno como o ABS: câmara fechada e ventilação."
+  ],
+  "cls.TPU_AERO": "TPU leve expansivo",
+  "mt.TPU_AERO": [
+    "TPU expansivo: mais temperatura significa mais espuma e peças mais macias e leves. Comece com fluxo de ≈ 0.6 e calibre na temperatura que vai usar.",
+    "Imprima devagar, com pouca ou nenhuma retração, e mantenha seco; não é adequado para a maioria dos alimentadores tipo AMS."
+  ]
 }

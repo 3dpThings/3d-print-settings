@@ -14,6 +14,8 @@ const SUPPORTS = [
   {id:'sup-pm-pa12sup',  brand:'Polymaker', name:'PolySupport for PA12', ftype:'PA-S', kind:'breakaway', nozzle:[270,300,285], bed:[50,80],  for:['PA'],         ifOnly:false, dry:'dry.supPa'},
   {id:'sup-pm-s1',       brand:'Polymaker', name:'PolyDissolve S1 (PVA)', ftype:'PVA', kind:'water',     nozzle:[215,225,220], bed:[25,60],  for:['PLA','PETG','PVB'], ifOnly:false, dry:'dry.pva', pva:true},
   {id:'sup-sunlu-pva',   brand:'Sunlu',     name:'PVA',                  ftype:'PVA',   kind:'water',     nozzle:[200,230,215], bed:[45,60],  for:['PLA','PETG'], ifOnly:false, dry:'dry.pva', pva:true},
+  {id:'sup-esun-pva',    brand:'eSun',      name:'PVA',                  ftype:'PVA',   kind:'water',     nozzle:[180,230,205], bed:[45,60],  for:['PLA','PETG'], ifOnly:false, dry:'dry.pva', pva:true},
+  {id:'sup-qidi-swhite',  brand:'Qidi',      name:'S-White (support for PA/PPA)', ftype:'PA-S', kind:'breakaway', nozzle:[260,280,270], bed:[60,80], for:['PA','PPA','PET'], ifOnly:false, dry:'dry.supPa'},
   {id:'sup-gen-pva',     brand:'Generic',   name:'PVA',                  ftype:'PVA',   kind:'water',     nozzle:[190,220,205], bed:[45,60],  for:['PLA','PETG'], ifOnly:false, dry:'dry.pva', pva:true},
   {id:'sup-gen-hips',    brand:'Generic',   name:'HIPS',                 ftype:'HIPS',  kind:'limonene',  nozzle:[230,250,240], bed:[90,110], for:['ABS','ASA'],  ifOnly:false, dry:'dry.abs'},
   {id:'sup-gen-bvoh',    brand:'Generic',   name:'BVOH',                 ftype:'BVOH',  kind:'water',     nozzle:[190,220,210], bed:[50,60],  for:['PLA','PETG','ABS','PA'], ifOnly:false, dry:'dry.pva', pva:true},

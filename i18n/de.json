@@ -637,5 +637,15 @@
     "Nimmt sehr schnell Feuchtigkeit auf: direkt aus einem beheizten Trockner drucken. Teile für volle Festigkeit tempern und feuchtekonditionieren."
   ],
   "dry.pvb": "50 °C · 12 h",
-  "plate.wf": "Glattes oder texturiertes PEI mit Klebestift (oder Magigoo PA); Bett bei 50 °C oder weniger"
+  "plate.wf": "Glattes oder texturiertes PEI mit Klebestift (oder Magigoo PA); Bett bei 50 °C oder weniger",
+  "cls.ABS_CF": "kohlefaserverstärktes ABS",
+  "mt.ABS_CF": [
+    "Kohlefaser macht es steifer und verringert den Verzug gegenüber normalem ABS, ist aber abrasiv: gehärtete Düse, idealerweise 0.6 mm.",
+    "Es setzt wie ABS Styrol frei: geschlossene Kammer und Lüftung."
+  ],
+  "cls.TPU_AERO": "schäumendes Leicht-TPU",
+  "mt.TPU_AERO": [
+    "Schäumendes TPU: heißer bedeutet mehr Schaum, weichere und leichtere Teile. Mit einem Flussverhältnis von ≈ 0.6 beginnen und bei der gewünschten Temperatur kalibrieren.",
+    "Langsam drucken, mit wenig oder keinem Rückzug, und trocken halten; für die meisten AMS-ähnlichen Zuführsysteme ungeeignet."
+  ]
 }
