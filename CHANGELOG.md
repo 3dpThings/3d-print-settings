@@ -4,6 +4,11 @@ All notable changes to this project are listed here. Versions follow [semantic v
 
 ## [Unreleased]
 
+- The support material dropdown now lists every filament: dedicated supports first, then easy-release filaments, then all others, with warnings for unknown pairs, same-family supports, abrasive supports on soft nozzles and particle-filled supports on small nozzles.
+- Support nozzle size and type can now be changed on the Bambu Lab H2D, H2C and X2D (mixed sizes and flow types), with a warning to check Bambu Studio and firmware support for mixed sizes.
+- New warning when the layer height is too thick for a smaller support nozzle.
+- The ideal support nozzle type is hardened when the support filament is abrasive.
+
 - Display menu in the header with mode (system, light, dark), style and font pair.
 - New styles: High contrast (WCAG AAA text contrast) and Low vision (20 % larger text, thicker borders and focus outline, low-glare background).
 - New font pairs: serif headings (Source Serif 4 + Source Sans 3) and hyperlegible (Atkinson Hyperlegible Next + Mono).

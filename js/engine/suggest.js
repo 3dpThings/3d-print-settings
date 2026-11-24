@@ -40,9 +40,11 @@ function idealType(p, f, t, n){
   else order = [p.nstock, 'std','hard','hf','hfhard'];
   return order.find(k => avail.includes(k)) || avail[0];
 }
-function idealSupType(p, n, mainType){
+function idealSupType(p, n, mainType, s){
   if (p.sameType) return mainType;
   const avail = typesAt(p, n);
+  const sc = s && s.fil ? CLASSES[s.fil.cls] : null;
+  if (sc && (sc.cf || sc.cfMild || sc.abr)){ const h = ['hard','hfhard'].find(k => avail.includes(k)); if (h) return h; }
   const order = [p.nstock==='hfhard' ? 'hard' : p.nstock==='hf' ? 'std' : p.nstock, 'std','hard','hf','hfhard'];
   return order.find(k => avail.includes(k)) || avail[0] || mainType;
 }

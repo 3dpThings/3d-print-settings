@@ -130,17 +130,22 @@ for (const code of ['en', 'es', 'ja']){
     let n, nt, sups;
     try {
       n = A.idealNozzle(p, f, t); nt = A.idealType(p, f, t, n);
-      sups = [null, ...(A.multiTool(p) ? A.supportOptions(f).filter(s => A.CLASSES[s.fil ? s.fil.cls : 'PLA']).slice(0, 2) : [])];
+      const opts = A.multiTool(p) ? A.supportOptions(f) : [];
+      // two recommended supports plus one "other" filament (abrasive if possible, to exercise the warnings)
+      const other = opts.find(s => s.tier === 'other' && s.fil && A.CLASSES[s.fil.cls].cf) || opts.find(s => s.tier === 'other');
+      sups = [null, ...opts.filter(s => s.tier !== 'other').slice(0, 2), ...(other ? [other] : [])];
     } catch(e){ err(`engine: crashed preparing ${p.id} × ${f.id} × ${t.id}: ${e.message}`); continue; }
     const lhs = code === 'en' ? A.lhOptions(n, A.idealLh(n, f, t)) : [null];
     for (const s of sups) for (const lh of lhs){
       combos++;
       const where = `${p.id} × ${f.id} × ${t.id} @${n}${s ? ' + ' + s.id : ''}${lh ? ' lh ' + lh : ''} [${code}]`;
       try {
-        const snt = s ? A.idealSupType(p, n, nt) : null;
-        const o = A.compute(p, f, n, t, s, s ? n : null, nt, snt, lh);
+        // with a support, also try a different support nozzle size on printers that allow mixing
+        const sn = s ? (p.mix !== false ? (p.nozzles.find(x => x !== n) || n) : n) : null;
+        const snt = s ? A.idealSupType(p, sn, nt, s) : null;
+        const o = A.compute(p, f, n, t, s, sn, nt, snt, lh);
         const alerts = A.checks(p, f, n, t, o, s), tips = A.buildTips(p, f, n, t, o, s);
-        const c = {p, f, n, t, o, c: A.CLASSES[f.cls], alerts, tips, s, sn: s ? n : null, nt, snt};
+        const c = {p, f, n, t, o, c: A.CLASSES[f.cls], alerts, tips, s, sn, nt, snt};
         c.groups = A.paramGroups(c);
         const txt = A.buildTxt(c), orca = A.buildOrca(c), prusa = A.buildPrusa(c);
         JSON.parse(orca); if (s) JSON.parse(A.buildOrcaSup(c));

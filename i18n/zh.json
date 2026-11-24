@@ -656,5 +656,14 @@
   "fonts.label": "字体",
   "fonts.tech": "技术风",
   "fonts.serif": "衬线标题",
-  "fonts.legible": "超易读"
+  "fonts.legible": "超易读",
+  "sup.cat.other": "其他耗材和支撑材料（非已知易剥离组合）",
+  "st.other": "这不是已知的易剥离组合，支撑可能比预期粘得更牢。先用 0.15–0.2 mm 的顶部 Z 距离和 2–3 层接触面，并先在小零件上测试。",
+  "a.supOther": "{sup} 不是已知可从 {mat} 轻松剥离的支撑：请在小零件上测试粘附，并使用 0.15–0.2 mm 的顶部 Z 距离。",
+  "a.supSameFam": "{sup} 与零件（{mat}）属于同一类材料：会像同材料支撑一样熔合。请保留 0.1–0.2 mm 的 Z 距离，或选择专用支撑或易剥离耗材。",
+  "a.supAbr": "{sup} 具有磨蚀性：请装入硬化钢支撑喷嘴，否则喷嘴会很快磨损。",
+  "a.supSmall": "{sup} 中的纤维或颗粒可能堵塞 0.25 mm 及以下的喷嘴：支撑请使用 0.4 mm 或更大的喷嘴。",
+  "a.supLh": "{lh} mm 的层高对 {n} mm 支撑喷嘴来说太厚（最大 {max} mm）：请降低层高或使用更大的支撑喷嘴。",
+  "a.supNozMixBbl": "Bambu Lab 正在为 {model} 逐步推出混合喷嘴尺寸：请确认你的 Bambu Studio 和固件版本支持不同尺寸；否则两侧请使用相同尺寸。",
+  "nz.supExpBbl": "支撑推荐：{n} mm，{t}。你可以选择其他尺寸或类型：在 {model} 上混用尺寸需要较新的 Bambu Studio 和固件。"
 }

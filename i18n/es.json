@@ -656,5 +656,14 @@
   "fonts.label": "Fuentes",
   "fonts.tech": "Técnica",
   "fonts.serif": "Títulos serif",
-  "fonts.legible": "Hiperlegible"
+  "fonts.legible": "Hiperlegible",
+  "sup.cat.other": "Otros filamentos y materiales de soporte (sin compatibilidad de despegue conocida)",
+  "st.other": "No es una pareja conocida que se despegue fácil, así que el soporte puede adherirse más de lo esperado. Empieza con una distancia Z superior de 0.15–0.2 mm y 2–3 capas de interfaz, y prueba antes en una pieza pequeña.",
+  "a.supOther": "{sup} no es un soporte de despegue fácil conocido para {mat}: prueba la adhesión en una pieza pequeña y usa una distancia Z superior de 0.15–0.2 mm.",
+  "a.supSameFam": "{sup} es de la misma familia que la pieza ({mat}): se fundirá como un soporte del mismo material. Deja una distancia Z de 0.1–0.2 mm, o elige un soporte específico o un filamento que se despegue fácil.",
+  "a.supAbr": "{sup} es abrasivo: ponlo en una boquilla de soporte endurecida o la desgastará rápido.",
+  "a.supSmall": "Las fibras o partículas de {sup} pueden atascar una boquilla de 0.25 mm o menos: usa 0.4 mm o más para el soporte.",
+  "a.supLh": "La altura de capa de {lh} mm es demasiado gruesa para la boquilla de soporte de {n} mm (máx. {max} mm): baja la altura de capa o usa una boquilla de soporte más grande.",
+  "a.supNozMixBbl": "Bambu Lab está desplegando la mezcla de tamaños de boquilla en la {model}: comprueba que tu versión de Bambu Studio y del firmware lo permiten; si no, usa el mismo tamaño en las dos.",
+  "nz.supExpBbl": "Ideal para el soporte: {n} mm, {t}. Puedes elegir otro tamaño o tipo: mezclar tamaños en la {model} requiere un Bambu Studio y un firmware recientes."
 }

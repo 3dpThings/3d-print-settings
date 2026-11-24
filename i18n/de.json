@@ -656,5 +656,14 @@
   "fonts.label": "Schriften",
   "fonts.tech": "Technisch",
   "fonts.serif": "Serifen-Überschriften",
-  "fonts.legible": "Hyperlesbar"
+  "fonts.legible": "Hyperlesbar",
+  "sup.cat.other": "Weitere Filamente und Stützmaterialien (keine bekannte leicht lösbare Kombination)",
+  "st.other": "Das ist keine bekannte leicht lösbare Kombination, die Stütze kann also stärker haften als erwartet. Mit 0.15–0.2 mm oberem Z-Abstand und 2–3 Interface-Schichten beginnen und zuerst an einem kleinen Teil testen.",
+  "a.supOther": "{sup} ist keine bekannte leicht lösbare Stütze für {mat}: Haftung an einem kleinen Teil testen und einen oberen Z-Abstand von 0.15–0.2 mm verwenden.",
+  "a.supSameFam": "{sup} gehört zur selben Familie wie das Teil ({mat}): Es verschmilzt wie eine Stütze aus demselben Material. 0.1–0.2 mm Z-Abstand lassen oder ein spezielles Stützmaterial bzw. ein leicht lösbares Filament wählen.",
+  "a.supAbr": "{sup} ist abrasiv: in eine gehärtete Stützdüse einlegen, sonst nutzt sich die Düse schnell ab.",
+  "a.supSmall": "Fasern oder Partikel in {sup} können Düsen von 0.25 mm oder kleiner verstopfen: für die Stütze 0.4 mm oder größer verwenden.",
+  "a.supLh": "Die Schichthöhe von {lh} mm ist für die {n}-mm-Stützdüse zu dick (max. {max} mm): Schichthöhe senken oder eine größere Stützdüse verwenden.",
+  "a.supNozMixBbl": "Bambu Lab führt gemischte Düsengrößen beim {model} schrittweise ein: Prüfe, ob deine Bambu-Studio- und Firmware-Version unterschiedliche Größen erlaubt; sonst in beiden dieselbe Größe verwenden.",
+  "nz.supExpBbl": "Ideal für die Stütze: {n} mm, {t}. Du kannst eine andere Größe oder Art wählen: Gemischte Düsengrößen beim {model} erfordern ein aktuelles Bambu Studio und eine aktuelle Firmware."
 }

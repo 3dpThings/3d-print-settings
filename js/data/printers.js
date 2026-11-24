@@ -3,9 +3,9 @@
 'use strict';
 
 const PRINTERS = [
-  {id:'bbl-x2d', brand:'Bambu Lab', model:'X2D', maxNozzle:300, maxBed:120, chamber:'active', maxChamber:65, hardened:true, drive:'direct', vol:'256 × 256 × 260 mm', flow:32, speedF:1, nozzles:[0.2,0.4,0.6,0.8], soak:5, dual:true, tools:2, mm:'dual', mix:false},
-  {id:'bbl-h2d', brand:'Bambu Lab', model:'H2D', maxNozzle:350, maxBed:120, chamber:'active', maxChamber:65, hardened:true, drive:'direct', vol:'325 × 320 × 325 mm', flow:40, speedF:1, nozzles:[0.2,0.4,0.6,0.8], soak:6, dual:true, tools:2, mm:'dual', mix:false},
-  {id:'bbl-h2c', brand:'Bambu Lab', model:'H2C', maxNozzle:350, maxBed:120, chamber:'active', maxChamber:65, hardened:true, drive:'direct', vol:'325 × 320 × 325 mm', flow:40, speedF:1, nozzles:[0.2,0.4,0.6,0.8], soak:6, dual:true, tools:7, mm:'nozzle', mix:false},
+  {id:'bbl-x2d', brand:'Bambu Lab', model:'X2D', maxNozzle:300, maxBed:120, chamber:'active', maxChamber:65, hardened:true, drive:'direct', vol:'256 × 256 × 260 mm', flow:32, speedF:1, nozzles:[0.2,0.4,0.6,0.8], soak:5, dual:true, tools:2, mm:'dual', mix:'exp'},
+  {id:'bbl-h2d', brand:'Bambu Lab', model:'H2D', maxNozzle:350, maxBed:120, chamber:'active', maxChamber:65, hardened:true, drive:'direct', vol:'325 × 320 × 325 mm', flow:40, speedF:1, nozzles:[0.2,0.4,0.6,0.8], soak:6, dual:true, tools:2, mm:'dual', mix:'exp'},
+  {id:'bbl-h2c', brand:'Bambu Lab', model:'H2C', maxNozzle:350, maxBed:120, chamber:'active', maxChamber:65, hardened:true, drive:'direct', vol:'325 × 320 × 325 mm', flow:40, speedF:1, nozzles:[0.2,0.4,0.6,0.8], soak:6, dual:true, tools:7, mm:'nozzle', mix:'exp'},
   {id:'bbl-h3c', brand:'Bambu Lab', model:'H3C', maxNozzle:350, maxBed:120, chamber:'active', maxChamber:65, hardened:true, drive:'direct', vol:'330 × 320 × 325 mm', flow:40, speedF:1, nozzles:[0.2,0.4,0.6,0.8], soak:6, tools:9, mm:'changer', mix:true},
   {id:'bbl-x1c', brand:'Bambu Lab', model:'X1 Carbon', maxNozzle:300, maxBed:110, chamber:'passive', hardened:true, drive:'direct', vol:'256 × 256 × 256 mm', flow:32, speedF:1, nozzles:[0.2,0.4,0.6,0.8], soak:5},
   {id:'bbl-p1s', brand:'Bambu Lab', model:'P1S', maxNozzle:300, maxBed:100, chamber:'passive', hardened:false, drive:'direct', vol:'256 × 256 × 256 mm', flow:32, speedF:1, nozzles:[0.2,0.4,0.6,0.8], soak:5},
@@ -38,9 +38,9 @@ const NT_FLOW = {std:1, hard:1, hf:1.6, hfhard:1.6};
 const BBL_DUAL = {std:[0.2], hard:[0.4,0.6,0.8], hfhard:[0.4,0.6,0.8]};
 const PRUSA_NX = {std:[0.25,0.4,0.6,0.8], hf:[0.4,0.6,0.8], hard:[0.4,0.6,0.8], hfhard:[0.4,0.6,0.8]};
 const NOZZLE_TYPES = {
-  'bbl-x2d': {stock:'hard', types:BBL_DUAL, sameType:true},
-  'bbl-h2d': {stock:'hard', types:BBL_DUAL, sameType:true},
-  'bbl-h2c': {stock:'hard', types:BBL_DUAL, sameType:true},
+  'bbl-x2d': {stock:'hard', types:BBL_DUAL},
+  'bbl-h2d': {stock:'hard', types:BBL_DUAL},
+  'bbl-h2c': {stock:'hard', types:BBL_DUAL},
   'bbl-h3c': {stock:'hard', types:{hard:[0.2,0.4,0.6,0.8], hfhard:[0.4,0.6,0.8]}},
   'bbl-x1c': {stock:'hard', types:{std:[0.2], hard:[0.4,0.6,0.8]}},
   'bbl-p1s': {stock:'std',  types:{std:[0.2,0.4], hard:[0.4,0.6,0.8]}},

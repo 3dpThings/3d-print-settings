@@ -656,5 +656,14 @@
   "fonts.label": "Polices",
   "fonts.tech": "Technique",
   "fonts.serif": "Titres à empattements",
-  "fonts.legible": "Hyperlisible"
+  "fonts.legible": "Hyperlisible",
+  "sup.cat.other": "Autres filaments et matériaux de support (combinaison non connue pour se détacher facilement)",
+  "st.other": "Ce n'est pas une combinaison connue pour se détacher facilement : le support peut adhérer plus que prévu. Commencez avec une distance Z supérieure de 0.15–0.2 mm et 2–3 couches d'interface, et testez d'abord sur une petite pièce.",
+  "a.supOther": "{sup} n'est pas un support connu pour se détacher facilement de {mat} : testez l'adhérence sur une petite pièce et utilisez une distance Z supérieure de 0.15–0.2 mm.",
+  "a.supSameFam": "{sup} est de la même famille que la pièce ({mat}) : il fusionnera comme un support du même matériau. Laissez une distance Z de 0.1–0.2 mm, ou choisissez un support dédié ou un filament qui se détache facilement.",
+  "a.supAbr": "{sup} est abrasif : mettez-le dans une buse de support trempée, sinon il l'usera rapidement.",
+  "a.supSmall": "Les fibres ou particules de {sup} peuvent boucher une buse de 0.25 mm ou moins : utilisez 0.4 mm ou plus pour le support.",
+  "a.supLh": "La hauteur de couche de {lh} mm est trop épaisse pour la buse de support de {n} mm (max. {max} mm) : réduisez la hauteur de couche ou prenez une buse de support plus grande.",
+  "a.supNozMixBbl": "Bambu Lab déploie progressivement les tailles de buse mixtes sur la {model} : vérifiez que vos versions de Bambu Studio et du firmware le permettent ; sinon, utilisez la même taille dans les deux.",
+  "nz.supExpBbl": "Idéal pour le support : {n} mm, {t}. Vous pouvez choisir une autre taille ou un autre type : les tailles mixtes sur la {model} demandent un Bambu Studio et un firmware récents."
 }

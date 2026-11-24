@@ -656,5 +656,14 @@
   "fonts.label": "Caratteri",
   "fonts.tech": "Tecnico",
   "fonts.serif": "Titoli con grazie",
-  "fonts.legible": "Iperleggibile"
+  "fonts.legible": "Iperleggibile",
+  "sup.cat.other": "Altri filamenti e materiali di supporto (nessuna combinazione nota a distacco facile)",
+  "st.other": "Non è una combinazione nota a distacco facile, quindi il supporto può aderire più del previsto. Parti con una distanza Z superiore di 0.15–0.2 mm e 2–3 strati di interfaccia, e prova prima su una parte piccola.",
+  "a.supOther": "{sup} non è un supporto noto a distacco facile per {mat}: prova l'adesione su una parte piccola e usa una distanza Z superiore di 0.15–0.2 mm.",
+  "a.supSameFam": "{sup} è della stessa famiglia della parte ({mat}): si fonderà come un supporto dello stesso materiale. Lascia una distanza Z di 0.1–0.2 mm, o scegli un supporto dedicato o un filamento a distacco facile.",
+  "a.supAbr": "{sup} è abrasivo: mettilo in un ugello di supporto temprato, altrimenti lo consumerà rapidamente.",
+  "a.supSmall": "Le fibre o particelle di {sup} possono intasare un ugello da 0.25 mm o meno: per il supporto usa 0.4 mm o più.",
+  "a.supLh": "L'altezza layer di {lh} mm è troppo spessa per l'ugello di supporto da {n} mm (max {max} mm): riduci l'altezza layer o usa un ugello di supporto più grande.",
+  "a.supNozMixBbl": "Bambu Lab sta introducendo gradualmente le dimensioni di ugello miste sulla {model}: verifica che le tue versioni di Bambu Studio e del firmware lo consentano; altrimenti usa la stessa dimensione in entrambi.",
+  "nz.supExpBbl": "Ideale per il supporto: {n} mm, {t}. Puoi scegliere un'altra dimensione o tipo: le dimensioni miste sulla {model} richiedono Bambu Studio e firmware recenti."
 }

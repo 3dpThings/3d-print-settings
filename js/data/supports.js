@@ -23,25 +23,35 @@ const SUPPORTS = [
 /* Catalogue filaments that barely stick to the main material, so they work as an easy-release support or interface */
 const GOOD_PAIRS = {PLA:['PETG'], PETG:['PLA'], TPU:['PLA']};
 const LEGACY_SUP = {'sup-x-petg':'fil:gen-petg', 'sup-x-pla':'fil:gen-pla'};
-function filSupport(f2, mainFam){
+/* tier: 'ded' = dedicated support for this material, 'pair' = filament that peels off easily,
+   'other' = any other filament or support material (allowed, but not a known easy-release pair) */
+function filSupport(f2, mainFam, tier){
   const c2 = CLASSES[f2.cls];
+  tier = tier || 'pair';
   return {id:'fil:'+f2.id, fil:f2, fam:c2.fam, ftype:c2.type, kind:'breakaway', nozzle:f2.nozzle, bed:[f2.bed[0], f2.bed[1]],
-    for:[mainFam], ifOnly: mainFam!=='TPU', dry:c2.dry, cross:true};
+    for:[mainFam], ifOnly: tier==='pair' && mainFam!=='TPU', dry:c2.dry, cross: tier==='pair', tier};
 }
 function supById(id){
   if (!id) return null;
   id = LEGACY_SUP[id] || id;
-  if (id.startsWith('fil:')){ const f2 = byId(FILAMENTS, id.slice(4)); return f2 ? filSupport(f2, null) : null; }
+  if (id.startsWith('fil:')){ const f2 = byId(FILAMENTS, id.slice(4)); return f2 ? filSupport(f2, null, 'other') : null; }
   return byId(SUPPORTS, id);
 }
 const supName = s => s.fil ? filName(s.fil) : `${brandName(s.brand)} ${s.name}`;
+const _supCache = new Map();
 function supportOptions(f){
+  if (_supCache.has(f.id)) return _supCache.get(f.id);
   const fam = CLASSES[f.cls].fam;
-  const ded = SUPPORTS.filter(s => s.for.includes(fam));
+  const ded = SUPPORTS.filter(s => s.for.includes(fam)).map(s => ({...s, tier:'ded'}));
   const pairs = GOOD_PAIRS[fam] || [];
-  const fils = FILAMENTS.filter(x => x!==f && pairs.includes(CLASSES[x.cls].fam) && !CLASSES[x.cls].cf && !CLASSES[x.cls].cfMild && !CLASSES[x.cls].hard && !CLASSES[x.cls].part && !CLASSES[x.cls].foam && x.cls!=='PLA_SILK')
-    .map(x => filSupport(x, fam));
-  return ded.concat(fils);
+  const isPair = x => { const c = CLASSES[x.cls]; return pairs.includes(c.fam) && !c.cf && !c.cfMild && !c.hard && !c.part && !c.foam && x.cls!=='PLA_SILK'; };
+  const pairFils = FILAMENTS.filter(x => x!==f && isPair(x)).map(x => filSupport(x, fam, 'pair'));
+  // Everything else is still selectable: other support materials, then every other filament
+  const otherSup = SUPPORTS.filter(s => !s.for.includes(fam)).map(s => ({...s, tier:'other'}));
+  const otherFils = FILAMENTS.filter(x => x!==f && !isPair(x)).map(x => filSupport(x, fam, 'other'));
+  const list = ded.concat(pairFils, otherSup, otherFils);
+  _supCache.set(f.id, list);
+  return list;
 }
 const supportsFor = supportOptions;
 const getSupport = (id, f) => { if (!id || !f) return null; id = LEGACY_SUP[id] || id; return supportOptions(f).find(s => s.id===id) || null; };

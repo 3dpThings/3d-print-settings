@@ -68,7 +68,7 @@ function storeLevel(c){
 }
 function idealSupport(p, f, t){
   if (!p || !f || !multiTool(p) || (t && t.id==='water')) return null;
-  const c = CLASSES[f.cls], opts = supportOptions(f);
+  const c = CLASSES[f.cls], opts = supportOptions(f).filter(s => s.tier !== 'other');
   if (!opts.length) return null;
   if (p.id==='bbl-x2d' && (c.fam==='PA' || c.fam==='PET')) return null;
   const bambu = p.brand==='Bambu Lab';
@@ -104,7 +104,7 @@ function supportSpec(f){
   const c = CLASSES[f.cls], list = supportsFor(f), t = byId(TYPES, (document.querySelector('input[name="ptype"]:checked')||{}).value);
   const s = getSupport($('sName').value, f);
   let txt;
-  if (!list.length) txt = T('f.support.noneAvail', {mat:c.type});
+  if (!list.some(s => s.tier !== 'other')) txt = T('f.support.noneAvail', {mat:c.type});
   else if (supIdeal) txt = T('sup.hint.ideal', {sup:supName(supIdeal)});
   else if (t && !t.supOn) txt = T('sup.hint.none');
   else txt = T('f.support.hint', {mat:c.type});
