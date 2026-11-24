@@ -34,4 +34,13 @@ CLASSES.PLA_WOOD  = {...CLASSES.PLA, part:true, wood:true, amsLiteNo:true, retD:
 CLASSES.PLA_AERO  = {...CLASSES.PLA, foam:true, flow:0.6, retD:0.5, amsLiteNo:true, fan:[30,60], dry:'dry.aero'};
 CLASSES.ASA_AERO  = {...CLASSES.ASA, type:'ASA Aero', foam:true, flow:0.6, retD:0.5, dry:'dry.abs8'};
 CLASSES.PETG_CF.amsLiteNo = true;
+CLASSES.PLA_HT    = {...CLASSES.PLA, type:'HT-PLA', hdt:'≈ 56 °C'};
+CLASSES.PLA_HT_GF = {...CLASSES.PLA_HT, type:'HT-PLA-GF', cf:true};
+CLASSES.COPE      = {...CLASSES.PLA, type:'CoPE', hdt:'—'};
+CLASSES.PVB       = {...CLASSES.PLA, fam:'PVB', type:'PVB', retD:1.0, hyg:true, dry:'dry.pvb', hdt:'—'};
+CLASSES.PETG_GLOW = {...CLASSES.PETG, part:true, abr:true, amsLiteNo:true};
+CLASSES.PETG_FLEX = {...CLASSES.PETG, type:'PETG/TPU', fan:[40,80], hdt:'—'};
+CLASSES.PC_ABS    = {...CLASSES.PC, type:'PC-ABS', chamber:50, brim:5, warp:3, hdt:'—'};
+/* Polymaker Warp-Free nylons: cool bed (≤ 50 °C), no fan, chamber door open */
+CLASSES.PA_WF     = {...CLASSES.PA_CF, type:'PA-CF/GF', chamber:0, needsEncl:false, warp:1, fan:[0,0], brim:0, plate:'plate.wf'};
 const clsLabel = cls => T('cls.'+cls);

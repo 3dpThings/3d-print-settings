@@ -595,5 +595,47 @@
   "theme.label": "Thème",
   "theme.system": "Système",
   "theme.light": "Clair",
-  "theme.dark": "Sombre"
+  "theme.dark": "Sombre",
+  "cls.PLA_HT": "PLA haute température (HT-PLA)",
+  "mt.PLA_HT": [
+    "S'imprime comme un PLA classique, mais garde sa forme sans charge jusqu'à environ 150 °C.",
+    "Pour résister à la chaleur sous charge, recuisez-le (environ 30 min à 100 °C) : la pièce peut un peu rétrécir ou se déformer, testez d'abord."
+  ],
+  "cls.PLA_HT_GF": "HT-PLA chargé verre",
+  "mt.PLA_HT_GF": [
+    "La fibre de verre est abrasive : utilisez une buse en acier trempé ou en rubis.",
+    "Un recuit à 80–100 °C (plus long pour les pièces épaisses) lui donne une tenue thermique proche de l'ABS, avec environ 0.3–0.6 % de variation dimensionnelle."
+  ],
+  "cls.COPE": "copolyester (CoPE)",
+  "mt.COPE": [
+    "Ce n'est pas un PLA, mais il s'imprime avec des réglages proches : ventilation à fond, plateau tiède et vitesses élevées.",
+    "Sur PEI texturé, utilisez un adhésif comme de la colle en bâton pour fiabiliser la première couche."
+  ],
+  "cls.PVB": "PVB (lissable à l'alcool)",
+  "mt.PVB": [
+    "Le PVB se dissout dans l'alcool isopropylique : vaporisez ou lissez à la vapeur d'IPA pour masquer les couches. Travaillez dans un endroit ventilé.",
+    "Plus hygroscopique que le PLA : séchez-le et rangez-le dans une boîte sèche. Le PVA (par exemple PolyDissolve S1) sert de support soluble."
+  ],
+  "cls.PETG_GLOW": "PETG phosphorescent",
+  "mt.PETG_GLOW": [
+    "Le pigment phosphorescent est abrasif : une buse trempée est recommandée, car il use vite les buses en laiton ou en inox.",
+    "Des parois plus épaisses et plus de couches supérieures brillent plus fort et plus longtemps ; il garde la ténacité et la tenue thermique du PETG."
+  ],
+  "cls.PETG_FLEX": "PETG élastique (mélange PETG/TPU)",
+  "mt.PETG_FLEX": [
+    "S'imprime presque comme un PETG, mais les pièces fléchissent, absorbent les chocs et reprennent leur forme : idéal pour clips, charnières et articulations souples.",
+    "Il est plus rigide que le TPU : il ne remplace pas un TPU souple pour des poignées ou des joints."
+  ],
+  "cls.PC_ABS": "mélange PC-ABS",
+  "mt.PC_ABS": [
+    "Plus tenace et plus résistant à la chaleur que l'ABS, et plus facile à imprimer que le PC pur.",
+    "Il se déforme quand même : imprimante fermée, enceinte chaude, bordure et colle sur le plateau."
+  ],
+  "cls.PA_WF": "nylon renforcé de fibres (Warp-Free)",
+  "mt.PA_WF": [
+    "Formulé pour imprimer sans enceinte chauffée : plateau à 50 °C maximum, ventilateur éteint et porte de l'enceinte ouverte.",
+    "Il absorbe l'humidité très vite : imprimez directement depuis un séchoir chauffant. Recuisez et conditionnez les pièces à l'humidité pour obtenir toute leur résistance."
+  ],
+  "dry.pvb": "50 °C · 12 h",
+  "plate.wf": "PEI lisse ou texturé avec colle en bâton (ou Magigoo PA) ; plateau à 50 °C maximum"
 }

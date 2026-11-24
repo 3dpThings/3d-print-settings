@@ -595,5 +595,47 @@
   "theme.label": "Tema",
   "theme.system": "Sistema",
   "theme.light": "Claro",
-  "theme.dark": "Oscuro"
+  "theme.dark": "Oscuro",
+  "cls.PLA_HT": "PLA de alta temperatura (HT-PLA)",
+  "mt.PLA_HT": [
+    "Se imprime como un PLA normal, pero mantiene la forma sin carga hasta unos 150 °C.",
+    "Para que resista el calor bajo carga, recuécelo (unos 30 min a 100 °C): la pieza puede encoger o deformarse un poco, así que prueba antes."
+  ],
+  "cls.PLA_HT_GF": "HT-PLA con fibra de vidrio",
+  "mt.PLA_HT_GF": [
+    "La fibra de vidrio es abrasiva: usa boquilla de acero endurecido o de rubí.",
+    "Recocerlo a 80–100 °C (más tiempo en piezas gruesas) le da una resistencia térmica similar al ABS, con un cambio dimensional de un 0.3–0.6 %."
+  ],
+  "cls.COPE": "copoliéster (CoPE)",
+  "mt.COPE": [
+    "No es un PLA, pero se imprime con ajustes parecidos: ventilador al máximo, cama templada y velocidades altas.",
+    "Sobre PEI texturizado, usa un adhesivo como pegamento en barra para asegurar la primera capa."
+  ],
+  "cls.PVB": "PVB (se alisa con alcohol)",
+  "mt.PVB": [
+    "El PVB se disuelve en alcohol isopropílico: pulverízalo o pule con vapor de IPA para disimular las capas. Trabaja en un sitio ventilado.",
+    "Es más higroscópico que el PLA: sécalo y guárdalo en caja seca. El PVA (por ejemplo PolyDissolve S1) sirve como soporte soluble."
+  ],
+  "cls.PETG_GLOW": "PETG fosforescente",
+  "mt.PETG_GLOW": [
+    "El pigmento fosforescente es abrasivo: se recomienda boquilla endurecida, porque desgasta rápido las de latón o inoxidable.",
+    "Paredes más gruesas y más capas superiores brillan más y durante más tiempo; conserva la tenacidad y la resistencia térmica del PETG."
+  ],
+  "cls.PETG_FLEX": "PETG elástico (mezcla PETG/TPU)",
+  "mt.PETG_FLEX": [
+    "Se imprime casi como un PETG, pero las piezas se doblan, absorben golpes y recuperan la forma: ideal para clips, bisagras y uniones flexibles.",
+    "Es más rígido que el TPU, así que no sustituye al TPU blando en empuñaduras o juntas."
+  ],
+  "cls.PC_ABS": "mezcla PC-ABS",
+  "mt.PC_ABS": [
+    "Más tenaz y resistente al calor que el ABS, y más fácil de imprimir que el PC puro.",
+    "Sigue deformándose: impresora cerrada, cámara caliente, brim y pegamento en la placa."
+  ],
+  "cls.PA_WF": "nylon reforzado con fibra (Warp-Free)",
+  "mt.PA_WF": [
+    "Formulado para imprimir sin cámara calefactada: cama a 50 °C o menos, ventilador apagado y puerta de la cámara abierta.",
+    "Absorbe humedad muy rápido: imprime directamente desde un secador. Recuece y acondiciona con humedad las piezas para lograr toda su resistencia."
+  ],
+  "dry.pvb": "50 °C · 12 h",
+  "plate.wf": "PEI liso o texturizado con pegamento en barra (o Magigoo PA); cama a 50 °C o menos"
 }

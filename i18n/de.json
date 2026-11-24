@@ -595,5 +595,47 @@
   "theme.label": "Design",
   "theme.system": "System",
   "theme.light": "Hell",
-  "theme.dark": "Dunkel"
+  "theme.dark": "Dunkel",
+  "cls.PLA_HT": "Hochtemperatur-PLA (HT-PLA)",
+  "mt.PLA_HT": [
+    "Druckt sich wie normales PLA, behält aber ohne Last bis etwa 150 °C seine Form.",
+    "Für Wärmebeständigkeit unter Last tempern (etwa 30 min bei 100 °C): Teile können leicht schrumpfen oder sich verziehen, also vorher testen."
+  ],
+  "cls.PLA_HT_GF": "glasfaserverstärktes HT-PLA",
+  "mt.PLA_HT_GF": [
+    "Die Glasfaser ist abrasiv: gehärtete Stahl- oder Rubindüse verwenden.",
+    "Tempern bei 80–100 °C (bei dicken Teilen länger) ergibt eine ABS-ähnliche Wärmebeständigkeit, bei etwa 0.3–0.6 % Maßänderung."
+  ],
+  "cls.COPE": "Copolyester (CoPE)",
+  "mt.COPE": [
+    "Kein PLA, druckt aber mit PLA-ähnlichen Einstellungen: voller Lüfter, niedrige Betttemperatur und hohe Geschwindigkeiten.",
+    "Auf texturiertem PEI einen Haftvermittler wie Klebestift für sichere erste Schichten verwenden."
+  ],
+  "cls.PVB": "PVB (mit Alkohol glättbar)",
+  "mt.PVB": [
+    "PVB löst sich in Isopropanol: Mit IPA besprühen oder dampfglätten, um Schichtlinien zu kaschieren. In gut belüftetem Raum arbeiten.",
+    "Hygroskopischer als PLA: trocknen und in einer Trockenbox lagern. PVA (z. B. PolyDissolve S1) eignet sich als lösliches Stützmaterial."
+  ],
+  "cls.PETG_GLOW": "nachleuchtendes PETG",
+  "mt.PETG_GLOW": [
+    "Das Leuchtpigment ist abrasiv: Eine gehärtete Düse wird empfohlen, da es Messing- oder Edelstahldüsen schnell abnutzt.",
+    "Dickere Wände und mehr obere Schichten leuchten heller und länger; Zähigkeit und Wärmebeständigkeit von PETG bleiben erhalten."
+  ],
+  "cls.PETG_FLEX": "elastisches PETG (PETG/TPU-Blend)",
+  "mt.PETG_FLEX": [
+    "Druckt sich fast wie PETG, aber fertige Teile biegen sich, dämpfen Stöße und federn zurück: gut für Clips, Scharniere und Filmgelenke.",
+    "Steifer als TPU, ersetzt also kein weiches TPU für Griffe oder Dichtungen."
+  ],
+  "cls.PC_ABS": "PC-ABS-Blend",
+  "mt.PC_ABS": [
+    "Zäher und wärmebeständiger als ABS und leichter zu drucken als reines PC.",
+    "Es verzieht sich trotzdem: geschlossener Drucker, warme Kammer, Brim und Kleber auf der Platte."
+  ],
+  "cls.PA_WF": "faserverstärktes Nylon (Warp-Free)",
+  "mt.PA_WF": [
+    "Für den Druck ohne beheizte Kammer entwickelt: Bett bei 50 °C oder weniger, Lüfter aus und Kammertür offen.",
+    "Nimmt sehr schnell Feuchtigkeit auf: direkt aus einem beheizten Trockner drucken. Teile für volle Festigkeit tempern und feuchtekonditionieren."
+  ],
+  "dry.pvb": "50 °C · 12 h",
+  "plate.wf": "Glattes oder texturiertes PEI mit Klebestift (oder Magigoo PA); Bett bei 50 °C oder weniger"
 }
