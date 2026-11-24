@@ -68,7 +68,7 @@ function compute(p, f, n, t, s, sn, nt, snt, lhSel){
   if (s){
     const snz = Math.min(clamp(s.nozzle[2], s.nozzle[0], s.nozzle[1]), p.maxNozzle);
     sup = {nz:snz, standby:Math.max(s.nozzle[0]-60, snz-40), ifLayers: s.ifOnly ? 3 : 2, noz: (p.mix === false || !sn) ? n : sn};
-    sup.nt = p.sameType ? nt : (snt && (p.ntypes[snt]||[]).includes(sup.noz) ? snt : idealSupType(p, sup.noz, nt));
+    sup.nt = p.sameType ? nt : (snt && (p.ntypes[snt]||[]).includes(sup.noz) ? snt : idealSupType(p, sup.noz, nt, s));
   }
   return {lh, lhIdeal, lhMin, lhMax, fl, lwO, lwI, walls, top, bottom, infill:t.infill, nz, nz1, nzLimited, bed, bed1, chamber, mvs, sp,
     fan:{min:fmin, max:fmax, off:c.fanOff}, ret, rs:c.rs, zhop:c.zhop, flow, brim, nt,
@@ -113,6 +113,16 @@ function checks(p, f, n, t, o, s){
     if (s.nozzle[0] > p.maxNozzle) add('crit','a.supTemp',{sup:sn, min:s.nozzle[0], model:p.model, max:p.maxNozzle});
     if (p.id==='bbl-x2d' && s.paSup) add('warn','a.supX2dPa');
     if (o.sup.noz !== n) add('info','a.supNozMix', {model:p.model});
+    if (o.sup.noz !== n && p.mix === 'exp' && p.brand === 'Bambu Lab') add('warn','a.supNozMixBbl', {model:p.model});
+    const [, supMax] = lhRange(o.sup.noz);
+    if (o.lh > supMax + 1e-9) add('warn','a.supLh', {lh:fmt(o.lh), n:fmtNozzle(o.sup.noz), max:fmt(supMax)});
+    const sc = s.fil ? CLASSES[s.fil.cls] : null;
+    if (sc && (sc.cf || sc.cfMild || sc.abr) && !NT_HARD[o.sup.nt]) add('warn','a.supAbr', {sup:sn});
+    if (sc && (sc.cf || sc.cfMild || sc.part) && o.sup.noz <= 0.25) add('crit','a.supSmall', {sup:sn});
+    if (s.tier === 'other'){
+      if (s.fil && sc.fam === c.fam) add('warn','a.supSameFam', {sup:sn, mat:c.type});
+      else add('info','a.supOther', {sup:sn, mat:c.type});
+    }
     if (s.pva && c.fam==='PETG' && o.bed > 60) add('warn','a.supPvaPetg',{sup:sn});
     else if (o.bed > s.bed[1] + 20) add('info','a.supBed',{mat:c.type, bed:o.bed, sup:sn, b1:s.bed[1]});
   }
@@ -128,6 +138,7 @@ function buildTips(p, f, n, t, o, s){
     const sn = supName(s);
     if (s.ifOnly) sup.push({tag:'support', key:true, text:T('st.interfaceOnly',{sup:sn})});
     if (s.cross) sup.push({tag:'support', text:T(c.fam==='TPU' ? 'st.tpuPla' : 'st.cross')});
+    if (s.tier === 'other') sup.push({tag:'support', key:true, text:T('st.other')});
     sup.push({tag:'support', text:T('st.'+s.kind)});
     if (s.pva) sup.push({tag:'drying', text:T('st.pva')});
     if (s.paSup) sup.push({tag:'support', text:T('st.supPa')});

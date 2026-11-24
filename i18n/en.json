@@ -656,5 +656,14 @@
   "fonts.label": "Fonts",
   "fonts.tech": "Technical",
   "fonts.serif": "Serif headings",
-  "fonts.legible": "Hyperlegible"
+  "fonts.legible": "Hyperlegible",
+  "sup.cat.other": "Other filaments and support materials (not a known easy-release pair)",
+  "st.other": "This isn't a known easy-release pair, so the support may bond more than expected. Start with a 0.15–0.2 mm top Z distance and 2–3 interface layers, and test on a small part first.",
+  "a.supOther": "{sup} isn't a known easy-release support for {mat}: test adhesion on a small part and use a top Z distance of 0.15–0.2 mm.",
+  "a.supSameFam": "{sup} is the same family as the part ({mat}): it will fuse like single-material supports. Leave a 0.1–0.2 mm Z distance, or pick a dedicated support or an easy-release filament.",
+  "a.supAbr": "{sup} is abrasive: put it in a hardened support nozzle, or it will wear the nozzle quickly.",
+  "a.supSmall": "The fibres or particles in {sup} can clog a nozzle of 0.25 mm or less: use 0.4 mm or larger for the support.",
+  "a.supLh": "The {lh} mm layer height is too thick for the {n} mm support nozzle (max {max} mm): lower the layer height or use a bigger support nozzle.",
+  "a.supNozMixBbl": "Bambu Lab is rolling out mixed nozzle sizes on the {model}: check that your Bambu Studio and firmware versions allow different sizes; otherwise use the same size in both.",
+  "nz.supExpBbl": "Ideal for the support: {n} mm, {t}. You can choose another size or type: mixed nozzle sizes on the {model} need a recent Bambu Studio and firmware."
 }

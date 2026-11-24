@@ -46,7 +46,7 @@ function updateSupNozzle(selectIdeal, val, valT){
   const q = readForm(), n = q.n, mt = q.nt, ideal = n;
   const lock = p.mix === false ? n : null;
   const lockType = p.sameType ? mt : null;
-  const idealT = idealSupType(p, n, mt);
+  const idealT = idealSupType(p, n, mt, s);
   const cur = val != null ? val : parseFloat((document.querySelector('input[name="supnozzle"]:checked')||{}).value);
   const curT = valT || (document.querySelector('input[name="supntype"]:checked')||{}).value;
   if (selectIdeal) fillSupNozzles(p, ideal, ideal, lock, idealT, idealT, lockType);
@@ -55,7 +55,7 @@ function updateSupNozzle(selectIdeal, val, valT){
   let key = 'nz.supHint2';
   if (lock != null && lockType) key = 'nz.supLocked2';
   else if (lock != null) key = 'nz.supLockedSize';
-  else if (p.mix === 'exp') key = 'nz.supExp2';
+  else if (p.mix === 'exp') key = p.brand==='Bambu Lab' ? 'nz.supExpBbl' : 'nz.supExp2';
   $('supNozHint').textContent = T(key, {model:p.model, n:fmtNozzle(n), t:tl});
 }
 function renderSuggestion(){
@@ -184,7 +184,8 @@ async function boot(){
         const ideal = supIdeal && s.id === supIdeal.id;
         const label = supName(s) + (ideal ? ' · ' + T('sup.ideal') : '');
         const sub = T('supk.'+s.kind) + (s.fil ? ' · ' + clsLabel(s.fil.cls) : '');
-        if (matchAll(`${label} ${sub} ${s.ftype}`, toks)) out.push({id:s.id, label, sub, group: s.fil ? T('sup.cat.filament', {mat}) : T('sup.cat.dedicated')});
+        const group = s.tier==='ded' ? T('sup.cat.dedicated') : s.tier==='pair' ? T('sup.cat.filament', {mat}) : T('sup.cat.other');
+        if (matchAll(`${label} ${sub} ${s.ftype}`, toks)) out.push({id:s.id, label, sub, group});
       });
       return out;
     },

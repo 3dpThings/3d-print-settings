@@ -656,5 +656,14 @@
   "fonts.label": "Fontes",
   "fonts.tech": "Técnica",
   "fonts.serif": "Títulos serifados",
-  "fonts.legible": "Hiperlegível"
+  "fonts.legible": "Hiperlegível",
+  "sup.cat.other": "Outros filamentos e materiais de suporte (sem combinação de remoção fácil conhecida)",
+  "st.other": "Não é uma combinação conhecida de remoção fácil, então o suporte pode aderir mais que o esperado. Comece com distância Z superior de 0.15–0.2 mm e 2–3 camadas de interface, e teste antes numa peça pequena.",
+  "a.supOther": "{sup} não é um suporte de remoção fácil conhecido para {mat}: teste a adesão numa peça pequena e use distância Z superior de 0.15–0.2 mm.",
+  "a.supSameFam": "{sup} é da mesma família da peça ({mat}): vai se fundir como um suporte do mesmo material. Deixe distância Z de 0.1–0.2 mm, ou escolha um suporte específico ou um filamento de remoção fácil.",
+  "a.supAbr": "{sup} é abrasivo: coloque-o num bico de suporte endurecido, senão ele desgasta o bico rápido.",
+  "a.supSmall": "As fibras ou partículas de {sup} podem entupir bicos de 0.25 mm ou menos: use 0.4 mm ou maior para o suporte.",
+  "a.supLh": "A altura de camada de {lh} mm é grossa demais para o bico de suporte de {n} mm (máx. {max} mm): reduza a altura de camada ou use um bico de suporte maior.",
+  "a.supNozMixBbl": "A Bambu Lab está liberando aos poucos tamanhos de bico mistos na {model}: confira se suas versões do Bambu Studio e do firmware permitem tamanhos diferentes; se não, use o mesmo tamanho nos dois.",
+  "nz.supExpBbl": "Ideal para o suporte: {n} mm, {t}. Você pode escolher outro tamanho ou tipo: misturar tamanhos na {model} exige Bambu Studio e firmware recentes."
 }

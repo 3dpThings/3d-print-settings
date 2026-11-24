@@ -11,7 +11,7 @@ Pick a printer, a filament (for example *Sunlu PETG* or *Bambu Lab PA6-CF*) and 
 - **25+ printers**, including multi-tool and tool-changer machines (Bambu Lab, Prusa, Creality, Elegoo, Anycubic, Qidi, Snapmaker, Flashforge, Voron).
 - **260+ filaments** from Bambu Lab, Prusament, Polymaker, Sunlu, eSun, Qidi, Elegoo, Creality, Overture, colorFabb, Recreus and NinjaTek, plus generic profiles.
 - **Nozzle types**: standard, hardened, high flow and hardened high flow, with abrasive-filament warnings.
-- **Support material** for dual and multi-tool printers: dedicated support filaments, and catalogue filaments that peel off easily (for example PLA under TPU).
+- **Support material** for dual and multi-tool printers: dedicated support filaments first, then catalogue filaments that peel off easily (for example PLA under TPU), then any other filament, with warnings when the pair isn't a known easy-release one. The support nozzle size and type can be changed, including mixed sizes on printers that allow them.
 - **Printer-specific tips**, for example how long to let the bed heat-soak after it reports its temperature.
 - **Drying and storage** instructions for every filament.
 - **Live results**: everything recalculates as you change a selection.
