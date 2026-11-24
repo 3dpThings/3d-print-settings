@@ -134,6 +134,11 @@ function initForm(){
 }
 
 $('theme').addEventListener('change', e => setTheme(e.target.value));
+$('style').addEventListener('change', e => setStyle(e.target.value));
+$('fonts').addEventListener('change', e => setFonts(e.target.value));
+// Close the Display menu with Escape or a click outside it
+document.addEventListener('click', e => { const m = $('displayMenu'); if (m.open && !m.contains(e.target)) m.open = false; });
+document.addEventListener('keydown', e => { const m = $('displayMenu'); if (e.key === 'Escape' && m.open){ m.open = false; m.querySelector('summary').focus(); } });
 
 /* Start-up: load English (and the saved language) before drawing anything. */
 async function boot(){

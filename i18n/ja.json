@@ -592,7 +592,7 @@
   "ft.trademarks": "ブランド名・製品名は各所有者の商標です。本プロジェクトはどのメーカーとも提携していません。",
   "ft.repo": "ソースコード",
   "ft.contribute": "プリンターやフィラメントを提案",
-  "theme.label": "テーマ",
+  "theme.label": "モード",
   "theme.system": "システム",
   "theme.light": "ライト",
   "theme.dark": "ダーク",
@@ -647,5 +647,14 @@
   "mt.TPU_AERO": [
     "発泡TPU：高温ほど発泡し、柔らかく軽い部品になります。フロー比は≈ 0.6から始め、使用する温度で校正してください。",
     "ゆっくり印刷し、リトラクトは少なめかなしにして、乾燥状態を保ってください。ほとんどのAMS系フィーダーには不向きです。"
-  ]
+  ],
+  "display.label": "表示",
+  "style.label": "スタイル",
+  "style.default": "標準",
+  "style.contrast": "ハイコントラスト",
+  "style.lowvision": "ロービジョン（大きな文字）",
+  "fonts.label": "フォント",
+  "fonts.tech": "テクニカル",
+  "fonts.serif": "セリフ見出し",
+  "fonts.legible": "ハイパーリジブル"
 }

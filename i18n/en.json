@@ -592,7 +592,7 @@
   "ft.trademarks": "Brand and product names are trademarks of their owners; this project isn't affiliated with any manufacturer.",
   "ft.repo": "Source code",
   "ft.contribute": "Suggest a printer or filament",
-  "theme.label": "Theme",
+  "theme.label": "Mode",
   "theme.system": "System",
   "theme.light": "Light",
   "theme.dark": "Dark",
@@ -647,5 +647,14 @@
   "mt.TPU_AERO": [
     "Foaming TPU: hotter means more foam, softer and lighter parts. Start with a flow ratio of ≈ 0.6 and calibrate at the temperature you'll use.",
     "Print slowly with little or no retraction, and keep it dry; it isn't suitable for most AMS-type feeders."
-  ]
+  ],
+  "display.label": "Display",
+  "style.label": "Style",
+  "style.default": "Standard",
+  "style.contrast": "High contrast",
+  "style.lowvision": "Low vision (larger text)",
+  "fonts.label": "Fonts",
+  "fonts.tech": "Technical",
+  "fonts.serif": "Serif headings",
+  "fonts.legible": "Hyperlegible"
 }

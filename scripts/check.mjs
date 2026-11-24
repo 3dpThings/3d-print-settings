@@ -98,6 +98,27 @@ for (const [pid, conf] of Object.entries(A.PRINTER_TIPS)){
   for (const tip of conf.tips || []) if (tip.key && !(tip.key in en)) err(`tips.js › ${pid}: tip key "${tip.key}" missing in en.json`);
 }
 
+/* ---------- 3b. Display styles and font pairs ---------- */
+{
+  const cctx = vm.createContext({});
+  vm.runInContext(rd('js/config.js') + ';this.__c = CONFIG;', cctx);
+  const cfg = cctx.__c, css = rd('css/themes.css');
+  for (const [list, attr] of [[cfg.styles, 'style'], [cfg.fontPairs, 'fonts']]){
+    list.forEach((o, i) => {
+      if (i > 0 && !css.includes(`[data-${attr}="${o.id}"]`)) err(`config.js › ${attr} "${o.id}": no [data-${attr}="${o.id}"] block in css/themes.css`);
+      if (/^[a-z]+\.[\w.]+$/.test(o.label) && !(o.label in en)) err(`config.js › ${attr} "${o.id}": label key "${o.label}" missing in en.json`);
+    });
+  }
+  for (const id of cfg.styles.slice(1).map(s => s.id)){
+    const light = (css.match(new RegExp(`:root\\[data-style="${id}"\\]\\{([^}]*)\\}`)) || [])[1] || '';
+    const dark = (css.match(new RegExp(`:root\\[data-style="${id}"\\]\\[data-mode="dark"\\]\\{([^}]*)\\}`)) || [])[1];
+    if (dark === undefined){ err(`themes.css › style "${id}" has no dark-mode block`); continue; }
+    const vars = b => new Set((b.match(/--[\w-]+(?=:)/g) || []));
+    const missing = [...vars(light)].filter(v => !vars(dark).has(v));
+    if (missing.length) err(`themes.css › style "${id}": dark block must also set ${missing.join(', ')}`);
+  }
+}
+
 /* ---------- 4. Engine sweep ---------- */
 const BAD_TEXT = /NaN|undefined|\[object Object\]|\{[a-zA-Z]+\}/;
 let combos = 0;
