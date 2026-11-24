@@ -637,5 +637,15 @@
     "Assorbe umidità molto in fretta: stampa direttamente da un essiccatore riscaldato. Ricuoci e condiziona le parti con l'umidità per la massima resistenza."
   ],
   "dry.pvb": "50 °C · 12 h",
-  "plate.wf": "PEI liscio o testurizzato con colla stick (o Magigoo PA); piano a 50 °C o meno"
+  "plate.wf": "PEI liscio o testurizzato con colla stick (o Magigoo PA); piano a 50 °C o meno",
+  "cls.ABS_CF": "ABS caricato carbonio",
+  "mt.ABS_CF": [
+    "La fibra di carbonio lo rende più rigido e riduce le deformazioni rispetto all'ABS normale, ma è abrasiva: ugello temprato, idealmente da 0.6 mm.",
+    "Emette stirene come l'ABS: camera chiusa e ventilazione."
+  ],
+  "cls.TPU_AERO": "TPU leggero espandente",
+  "mt.TPU_AERO": [
+    "TPU espandente: più caldo significa più schiuma, parti più morbide e leggere. Parti da un flusso di ≈ 0.6 e calibralo alla temperatura che userai.",
+    "Stampa lentamente, con poca o nessuna retrazione, e tienilo asciutto; non è adatto alla maggior parte degli alimentatori tipo AMS."
+  ]
 }
