@@ -4,6 +4,8 @@ All notable changes to this project are listed here. Versions follow [semantic v
 
 ## [Unreleased]
 
+- Added the Bambu Lab P3C (7-tool changer, enclosed without chamber heating, 300 °C hardened 0.2–0.8 mm nozzles, mixed nozzle sizes), with tips for tool swaps and soft TPU.
+
 - Searchable dropdowns show the name on one line and the details below, wrapping instead of scrolling sideways.
 
 - The support material dropdown now lists every filament: dedicated supports first, then easy-release filaments, then all others, with warnings for unknown pairs, same-family supports, abrasive supports on soft nozzles and particle-filled supports on small nozzles.

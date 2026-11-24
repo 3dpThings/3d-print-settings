@@ -665,5 +665,7 @@
   "a.supSmall": "Fasern oder Partikel in {sup} können Düsen von 0.25 mm oder kleiner verstopfen: für die Stütze 0.4 mm oder größer verwenden.",
   "a.supLh": "Die Schichthöhe von {lh} mm ist für die {n}-mm-Stützdüse zu dick (max. {max} mm): Schichthöhe senken oder eine größere Stützdüse verwenden.",
   "a.supNozMixBbl": "Bambu Lab führt gemischte Düsengrößen beim {model} schrittweise ein: Prüfe, ob deine Bambu-Studio- und Firmware-Version unterschiedliche Größen erlaubt; sonst in beiden dieselbe Größe verwenden.",
-  "nz.supExpBbl": "Ideal für die Stütze: {n} mm, {t}. Du kannst eine andere Größe oder Art wählen: Gemischte Düsengrößen beim {model} erfordern ein aktuelles Bambu Studio und eine aktuelle Firmware."
+  "nz.supExpBbl": "Ideal für die Stütze: {n} mm, {t}. Du kannst eine andere Größe oder Art wählen: Gemischte Düsengrößen beim {model} erfordern ein aktuelles Bambu Studio und eine aktuelle Firmware.",
+  "pt.p3c.swap": "Die 7 Werkzeuge wechseln in etwa 6 Sekunden, und Düsengrößen lassen sich in einem Druck mischen: Stützmaterial nur an den Kontaktflächen oder ein 0.2-mm-Werkzeug für feine Details kostet kaum Zeit.",
+  "pt.p3c.tpu": "Für TPU weicher als 90A das optionale 2.85-mm-PrintTool über den Bypass des AMS 3P verwenden: Es verarbeitet TPU bis 75A mit viel höherem Durchfluss als 1.75-mm-Filament."
 }

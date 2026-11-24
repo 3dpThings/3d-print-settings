@@ -665,5 +665,7 @@
   "a.supSmall": "Les fibres ou particules de {sup} peuvent boucher une buse de 0.25 mm ou moins : utilisez 0.4 mm ou plus pour le support.",
   "a.supLh": "La hauteur de couche de {lh} mm est trop épaisse pour la buse de support de {n} mm (max. {max} mm) : réduisez la hauteur de couche ou prenez une buse de support plus grande.",
   "a.supNozMixBbl": "Bambu Lab déploie progressivement les tailles de buse mixtes sur la {model} : vérifiez que vos versions de Bambu Studio et du firmware le permettent ; sinon, utilisez la même taille dans les deux.",
-  "nz.supExpBbl": "Idéal pour le support : {n} mm, {t}. Vous pouvez choisir une autre taille ou un autre type : les tailles mixtes sur la {model} demandent un Bambu Studio et un firmware récents."
+  "nz.supExpBbl": "Idéal pour le support : {n} mm, {t}. Vous pouvez choisir une autre taille ou un autre type : les tailles mixtes sur la {model} demandent un Bambu Studio et un firmware récents.",
+  "pt.p3c.swap": "Ses 7 outils s'échangent en 6 secondes environ et il peut mélanger les tailles de buse dans une même impression : un support dédié sur les interfaces, ou un outil de 0.2 mm pour les détails, ne coûte presque pas de temps.",
+  "pt.p3c.tpu": "Pour un TPU plus souple que 90A, utilisez le PrintTool optionnel de 2.85 mm alimenté par la dérivation de l'AMS 3P : il accepte le TPU jusqu'à 75A avec un débit bien plus élevé que le filament de 1.75 mm."
 }

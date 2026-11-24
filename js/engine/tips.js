@@ -63,6 +63,11 @@ const PRINTER_TIPS = {
     tp('multitool','pt.h3c.swap'),
     tp('plate','pt.platePaPc', x=>isFam(x,'PA','PC','PET','PPA','PPS')),
   ]},
+  'bbl-p3c': {tips:[
+    tp('multitool','pt.p3c.swap'),
+    tp('TPU','pt.p3c.tpu', x=>x.c.fam==='TPU' && (x.c.soft || x.c.verySoft)),
+    tp('plate','pt.platePaPc', x=>isFam(x,'PA','PC','PET','PPA')),
+  ]},
   'cr-k3': {tips:[
     tp('enclosure','pt.k3.open', hot, null, true),
     tp('multitool','pt.k3.swap'),

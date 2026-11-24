@@ -665,5 +665,7 @@
   "a.supSmall": "The fibres or particles in {sup} can clog a nozzle of 0.25 mm or less: use 0.4 mm or larger for the support.",
   "a.supLh": "The {lh} mm layer height is too thick for the {n} mm support nozzle (max {max} mm): lower the layer height or use a bigger support nozzle.",
   "a.supNozMixBbl": "Bambu Lab is rolling out mixed nozzle sizes on the {model}: check that your Bambu Studio and firmware versions allow different sizes; otherwise use the same size in both.",
-  "nz.supExpBbl": "Ideal for the support: {n} mm, {t}. You can choose another size or type: mixed nozzle sizes on the {model} need a recent Bambu Studio and firmware."
+  "nz.supExpBbl": "Ideal for the support: {n} mm, {t}. You can choose another size or type: mixed nozzle sizes on the {model} need a recent Bambu Studio and firmware.",
+  "pt.p3c.swap": "Its 7 tools swap in about 6 seconds and it can mix nozzle sizes in one job, so dedicated support material on the interfaces, or a 0.2 mm tool for fine details, costs very little time.",
+  "pt.p3c.tpu": "For TPU softer than 90A, use the optional 2.85 mm PrintTool fed through the AMS 3P bypass: it handles TPU down to 75A at a much higher flow than 1.75 mm filament."
 }

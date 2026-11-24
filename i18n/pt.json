@@ -665,5 +665,7 @@
   "a.supSmall": "As fibras ou partículas de {sup} podem entupir bicos de 0.25 mm ou menos: use 0.4 mm ou maior para o suporte.",
   "a.supLh": "A altura de camada de {lh} mm é grossa demais para o bico de suporte de {n} mm (máx. {max} mm): reduza a altura de camada ou use um bico de suporte maior.",
   "a.supNozMixBbl": "A Bambu Lab está liberando aos poucos tamanhos de bico mistos na {model}: confira se suas versões do Bambu Studio e do firmware permitem tamanhos diferentes; se não, use o mesmo tamanho nos dois.",
-  "nz.supExpBbl": "Ideal para o suporte: {n} mm, {t}. Você pode escolher outro tamanho ou tipo: misturar tamanhos na {model} exige Bambu Studio e firmware recentes."
+  "nz.supExpBbl": "Ideal para o suporte: {n} mm, {t}. Você pode escolher outro tamanho ou tipo: misturar tamanhos na {model} exige Bambu Studio e firmware recentes.",
+  "pt.p3c.swap": "Suas 7 ferramentas trocam em cerca de 6 segundos e ela pode misturar tamanhos de bico na mesma impressão: usar material de suporte específico nas interfaces, ou uma ferramenta de 0.2 mm para os detalhes, quase não aumenta o tempo.",
+  "pt.p3c.tpu": "Para TPU mais macio que 90A, use a PrintTool opcional de 2.85 mm alimentada pelo bypass do AMS 3P: ela aceita TPU de até 75A com fluxo muito maior que o filamento de 1.75 mm."
 }
