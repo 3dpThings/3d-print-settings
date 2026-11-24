@@ -4,6 +4,8 @@ All notable changes to this project are listed here. Versions follow [semantic v
 
 ## [Unreleased]
 
+- Searchable dropdowns show the name on one line and the details below, wrapping instead of scrolling sideways.
+
 - The support material dropdown now lists every filament: dedicated supports first, then easy-release filaments, then all others, with warnings for unknown pairs, same-family supports, abrasive supports on soft nozzles and particle-filled supports on small nozzles.
 - Support nozzle size and type can now be changed on the Bambu Lab H2D, H2C and X2D (mixed sizes and flow types), with a warning to check Bambu Studio and firmware support for mixed sizes.
 - New warning when the layer height is too thick for a smaller support nozzle.

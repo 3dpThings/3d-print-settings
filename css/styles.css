@@ -96,9 +96,10 @@ select:hover{border-color:var(--muted)}
 .combo input:hover{border-color:var(--muted)}
 .combo input[aria-expanded="true"]{border-color:var(--accent)}
 .combo input::placeholder{color:var(--muted);opacity:1}
-.combo-list{position:absolute;z-index:30;left:0;right:0;top:calc(100% + 4px);min-width:260px;max-height:320px;overflow:auto;margin:0;padding:4px;list-style:none;background:var(--surface);border:var(--bw) solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-.combo-list [role="option"]{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 8px;border-radius:4px;cursor:pointer;font-size:calc(14px * var(--fs))}
-.combo-list [role="option"] small{color:var(--muted);font-size:calc(12px * var(--fs));white-space:nowrap}
+.combo-list{position:absolute;z-index:30;left:0;right:0;top:calc(100% + 4px);min-width:260px;max-height:320px;overflow-x:hidden;overflow-y:auto;margin:0;padding:4px;list-style:none;background:var(--surface);border:var(--bw) solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+/* Name on the first line, details below; both wrap so nothing is cut off */
+.combo-list [role="option"]{display:flex;flex-direction:column;gap:1px;padding:7px 8px;overflow-wrap:anywhere;border-radius:4px;cursor:pointer;font-size:calc(14px * var(--fs))}
+.combo-list [role="option"] small{color:var(--muted);font-size:calc(12px * var(--fs));line-height:1.35;white-space:normal}
 .combo-list [role="option"].act{background:var(--accent-soft)}
 .combo-list [role="option"][aria-selected="true"] span{font-weight:600}
 .combo-list mark{background:none;color:var(--accent);font-weight:600}
