@@ -595,5 +595,47 @@
   "theme.label": "Tema",
   "theme.system": "Sistema",
   "theme.light": "Chiaro",
-  "theme.dark": "Scuro"
+  "theme.dark": "Scuro",
+  "cls.PLA_HT": "PLA alta temperatura (HT-PLA)",
+  "mt.PLA_HT": [
+    "Si stampa come un PLA normale, ma mantiene la forma senza carico fino a circa 150 °C.",
+    "Per resistere al calore sotto carico, ricuocilo (circa 30 min a 100 °C): la parte può restringersi o deformarsi un po', quindi prova prima."
+  ],
+  "cls.PLA_HT_GF": "HT-PLA caricato vetro",
+  "mt.PLA_HT_GF": [
+    "La fibra di vetro è abrasiva: usa un ugello in acciaio temprato o in rubino.",
+    "La ricottura a 80–100 °C (più a lungo per parti spesse) dà una resistenza termica simile all'ABS, con circa 0.3–0.6 % di variazione dimensionale."
+  ],
+  "cls.COPE": "copoliestere (CoPE)",
+  "mt.COPE": [
+    "Non è un PLA, ma si stampa con impostazioni simili: ventola al massimo, piano tiepido e velocità elevate.",
+    "Su PEI testurizzato usa un adesivo come la colla stick per un primo strato affidabile."
+  ],
+  "cls.PVB": "PVB (levigabile con alcol)",
+  "mt.PVB": [
+    "Il PVB si scioglie nell'alcol isopropilico: spruzzalo o levigalo a vapore con IPA per nascondere gli strati. Lavora in un ambiente ventilato.",
+    "È più igroscopico del PLA: asciugalo e conservalo in una dry box. Il PVA (per esempio PolyDissolve S1) funziona come supporto solubile."
+  ],
+  "cls.PETG_GLOW": "PETG fosforescente",
+  "mt.PETG_GLOW": [
+    "Il pigmento fosforescente è abrasivo: si consiglia un ugello temprato, perché consuma rapidamente quelli in ottone o acciaio inox.",
+    "Pareti più spesse e più strati superiori brillano più a lungo e più intensamente; mantiene la tenacità e la resistenza termica del PETG."
+  ],
+  "cls.PETG_FLEX": "PETG elastico (miscela PETG/TPU)",
+  "mt.PETG_FLEX": [
+    "Si stampa quasi come un PETG, ma le parti si flettono, assorbono gli urti e tornano in forma: ottimo per clip, cerniere e giunti flessibili.",
+    "È più rigido del TPU, quindi non sostituisce il TPU morbido per impugnature o guarnizioni."
+  ],
+  "cls.PC_ABS": "miscela PC-ABS",
+  "mt.PC_ABS": [
+    "Più tenace e resistente al calore dell'ABS, e più facile da stampare del PC puro.",
+    "Si deforma comunque: stampante chiusa, camera calda, brim e colla sul piano."
+  ],
+  "cls.PA_WF": "nylon rinforzato con fibra (Warp-Free)",
+  "mt.PA_WF": [
+    "Formulato per stampare senza camera riscaldata: piano a 50 °C o meno, ventola spenta e sportello della camera aperto.",
+    "Assorbe umidità molto in fretta: stampa direttamente da un essiccatore riscaldato. Ricuoci e condiziona le parti con l'umidità per la massima resistenza."
+  ],
+  "dry.pvb": "50 °C · 12 h",
+  "plate.wf": "PEI liscio o testurizzato con colla stick (o Magigoo PA); piano a 50 °C o meno"
 }

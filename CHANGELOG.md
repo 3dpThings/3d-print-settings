@@ -4,6 +4,12 @@ All notable changes to this project are listed here. Versions follow [semantic v
 
 ## [Unreleased]
 
+- Complete Bambu Lab, Polymaker and Sunlu catalogues: 91 new filaments (195 in total), including Polymaker G-Flex PETG, the Panchroma and Fiberon lines, HT-PLA, ABS Pro/Max and PolySmooth, and Sunlu's high-speed, PA and PC lines.
+- New material classes: HT-PLA, HT-PLA-GF, CoPE, PVB, glow-in-the-dark PETG, elastic PETG (PETG/TPU), PC-ABS and Warp-Free nylon (cool bed, no heated chamber).
+- New support materials: Polymaker PolySupport for PLA, PolySupport for PA12, PolyDissolve S1, and Sunlu PVA.
+- Renamed Polymaker products to their current names (PolyTerra → Panchroma Matte, PolyMide PA6-CF → Fiberon PA6-CF20, PolyLite ASA → ASA).
+- Filaments with glow pigment are now flagged as abrasive in the filament summary.
+
 - Light/dark theme selector (System, Light, Dark) in the header; System follows the operating system setting.
 - Wide screens: sections 01–04 come first again, with Printer and Filament side by side, and the settings below.
 

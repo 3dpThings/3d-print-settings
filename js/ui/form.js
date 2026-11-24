@@ -56,7 +56,7 @@ function printerSpec(p){
 function filamentSpec(f){
   const c = CLASSES[f.cls];
   let s = T('spec.fil', {label:clsLabel(f.cls), n0:f.nozzle[0], n1:f.nozzle[1], b0:f.bed[0], b1:f.bed[1]});
-  if (c.cf || c.cfMild) s += ' · ' + T('spec.abrasive');
+  if (c.cf || c.cfMild || c.abr) s += ' · ' + T('spec.abrasive');
   if (c.hyg) s += ' · ' + T('spec.hygro');
   $('fSpec').textContent = s;
   $('fDry').innerHTML = `<span><b>${esc(T('f.dryLabel'))}</b> ${esc(T(f.dry || c.dry))}</span><span><b>${esc(T('f.storeLabel'))}</b> ${esc(T('store.'+storeLevel(c)))}</span>`;

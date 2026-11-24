@@ -595,5 +595,47 @@
   "theme.label": "Theme",
   "theme.system": "System",
   "theme.light": "Light",
-  "theme.dark": "Dark"
+  "theme.dark": "Dark",
+  "cls.PLA_HT": "high-temperature PLA (HT-PLA)",
+  "mt.PLA_HT": [
+    "Prints like regular PLA, but holds its shape without load up to about 150 °C.",
+    "For heat resistance under load, anneal it (about 30 min at 100 °C): parts may shrink or warp slightly, so test first."
+  ],
+  "cls.PLA_HT_GF": "glass-fibre HT-PLA",
+  "mt.PLA_HT_GF": [
+    "The glass fibre is abrasive: use a hardened-steel or ruby nozzle.",
+    "Annealing at 80–100 °C (longer for thick parts) gives it ABS-like heat resistance, with about 0.3–0.6 % dimensional change."
+  ],
+  "cls.COPE": "copolyester (CoPE)",
+  "mt.COPE": [
+    "Not a PLA, but it prints with PLA-like settings: full fan, low bed temperature and high speeds.",
+    "On textured PEI, use an adhesive such as glue stick for reliable first layers."
+  ],
+  "cls.PVB": "PVB (smoothable with alcohol)",
+  "mt.PVB": [
+    "PVB dissolves in isopropyl alcohol: spray or vapour-polish it with IPA to hide layer lines. Work in a ventilated area.",
+    "More hygroscopic than PLA: dry it and keep it in a dry box. PVA (for example PolyDissolve S1) works as a soluble support."
+  ],
+  "cls.PETG_GLOW": "glow-in-the-dark PETG",
+  "mt.PETG_GLOW": [
+    "The glow pigment is abrasive: a hardened nozzle is recommended, as it wears brass or stainless nozzles quickly.",
+    "Thicker walls and more top layers glow brighter and for longer; it keeps PETG's toughness and heat resistance."
+  ],
+  "cls.PETG_FLEX": "elastic PETG (PETG/TPU blend)",
+  "mt.PETG_FLEX": [
+    "Prints almost like PETG, but finished parts flex, absorb impacts and spring back: good for clips, hinges and living joints.",
+    "It's stiffer than TPU, so it won't replace soft TPU for grips or gaskets."
+  ],
+  "cls.PC_ABS": "PC-ABS blend",
+  "mt.PC_ABS": [
+    "Tougher and more heat-resistant than ABS, and easier to print than pure PC.",
+    "It still warps: enclosed printer, warm chamber, brim and glue on the plate."
+  ],
+  "cls.PA_WF": "fibre-reinforced nylon (Warp-Free)",
+  "mt.PA_WF": [
+    "Formulated to print without a heated chamber: keep the bed at 50 °C or below, the fan off and the chamber door open.",
+    "It absorbs moisture very quickly: print straight from a heated dryer. Anneal and moisture-condition parts for full strength."
+  ],
+  "dry.pvb": "50 °C · 12 h",
+  "plate.wf": "Smooth or textured PEI with glue stick (or Magigoo PA); bed at 50 °C or below"
 }
