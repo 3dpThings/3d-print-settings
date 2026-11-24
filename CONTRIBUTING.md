@@ -94,6 +94,10 @@ If no existing class fits (a new material family, or a filled material with spec
 
 Use the terms people actually use in your language's 3D-printing community. If a term is usually left in English (for example *brim*, *ironing* or *flow ratio* in some communities), leave it in English.
 
+## Styles and fonts
+
+Colours, text size and fonts are defined in `css/themes.css`, and the styles offered in the Display menu are listed in `js/config.js`. [docs/THEMING.md](docs/THEMING.md) explains how to add a style or a font pair.
+
 ## Code changes
 
 - Plain browser JavaScript, no framework, no build step. Keep it that way unless we've discussed it in an issue.

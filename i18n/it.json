@@ -592,7 +592,7 @@
   "ft.trademarks": "I nomi di marchi e prodotti appartengono ai rispettivi proprietari; questo progetto non è affiliato ad alcun produttore.",
   "ft.repo": "Codice sorgente",
   "ft.contribute": "Suggerisci una stampante o un filamento",
-  "theme.label": "Tema",
+  "theme.label": "Modalità",
   "theme.system": "Sistema",
   "theme.light": "Chiaro",
   "theme.dark": "Scuro",
@@ -647,5 +647,14 @@
   "mt.TPU_AERO": [
     "TPU espandente: più caldo significa più schiuma, parti più morbide e leggere. Parti da un flusso di ≈ 0.6 e calibralo alla temperatura che userai.",
     "Stampa lentamente, con poca o nessuna retrazione, e tienilo asciutto; non è adatto alla maggior parte degli alimentatori tipo AMS."
-  ]
+  ],
+  "display.label": "Aspetto",
+  "style.label": "Stile",
+  "style.default": "Standard",
+  "style.contrast": "Contrasto elevato",
+  "style.lowvision": "Ipovisione (testo più grande)",
+  "fonts.label": "Caratteri",
+  "fonts.tech": "Tecnico",
+  "fonts.serif": "Titoli con grazie",
+  "fonts.legible": "Iperleggibile"
 }

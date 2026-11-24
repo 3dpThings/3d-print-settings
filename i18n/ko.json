@@ -592,7 +592,7 @@
   "ft.trademarks": "브랜드와 제품명은 각 소유자의 상표이며, 이 프로젝트는 어떤 제조사와도 제휴하지 않습니다.",
   "ft.repo": "소스 코드",
   "ft.contribute": "프린터나 필라멘트 제안하기",
-  "theme.label": "테마",
+  "theme.label": "모드",
   "theme.system": "시스템",
   "theme.light": "라이트",
   "theme.dark": "다크",
@@ -647,5 +647,14 @@
   "mt.TPU_AERO": [
     "발포 TPU: 온도가 높을수록 더 많이 발포되어 부품이 더 부드럽고 가벼워집니다. 플로우 비율 ≈ 0.6에서 시작해 실제 사용할 온도에서 보정하세요.",
     "천천히 출력하고 리트랙션은 적게 하거나 끄며, 건조하게 보관하세요. 대부분의 AMS형 피더에는 맞지 않습니다."
-  ]
+  ],
+  "display.label": "화면",
+  "style.label": "스타일",
+  "style.default": "표준",
+  "style.contrast": "고대비",
+  "style.lowvision": "저시력(큰 글자)",
+  "fonts.label": "글꼴",
+  "fonts.tech": "테크니컬",
+  "fonts.serif": "세리프 제목",
+  "fonts.legible": "고가독성"
 }

@@ -592,7 +592,7 @@
   "ft.trademarks": "Les noms de marques et de produits appartiennent à leurs propriétaires ; ce projet n'est affilié à aucun fabricant.",
   "ft.repo": "Code source",
   "ft.contribute": "Proposer une imprimante ou un filament",
-  "theme.label": "Thème",
+  "theme.label": "Mode",
   "theme.system": "Système",
   "theme.light": "Clair",
   "theme.dark": "Sombre",
@@ -647,5 +647,14 @@
   "mt.TPU_AERO": [
     "TPU moussant : plus chaud signifie plus de mousse, des pièces plus souples et plus légères. Commencez avec un débit de ≈ 0.6 et calibrez-le à la température utilisée.",
     "Imprimez lentement, avec peu ou pas de rétraction, et gardez-le sec ; il ne convient pas à la plupart des systèmes de type AMS."
-  ]
+  ],
+  "display.label": "Affichage",
+  "style.label": "Style",
+  "style.default": "Standard",
+  "style.contrast": "Contraste élevé",
+  "style.lowvision": "Basse vision (texte plus grand)",
+  "fonts.label": "Polices",
+  "fonts.tech": "Technique",
+  "fonts.serif": "Titres à empattements",
+  "fonts.legible": "Hyperlisible"
 }

@@ -592,7 +592,7 @@
   "ft.trademarks": "Las marcas y nombres de producto pertenecen a sus propietarios; este proyecto no está afiliado a ningún fabricante.",
   "ft.repo": "Código fuente",
   "ft.contribute": "Sugerir una impresora o filamento",
-  "theme.label": "Tema",
+  "theme.label": "Modo",
   "theme.system": "Sistema",
   "theme.light": "Claro",
   "theme.dark": "Oscuro",
@@ -647,5 +647,14 @@
   "mt.TPU_AERO": [
     "TPU espumante: más temperatura significa más espuma y piezas más blandas y ligeras. Empieza con un flujo de ≈ 0.6 y calíbralo a la temperatura que vayas a usar.",
     "Imprime despacio, con poca o ninguna retracción, y mantenlo seco; no es apto para la mayoría de alimentadores tipo AMS."
-  ]
+  ],
+  "display.label": "Apariencia",
+  "style.label": "Estilo",
+  "style.default": "Estándar",
+  "style.contrast": "Alto contraste",
+  "style.lowvision": "Baja visión (texto más grande)",
+  "fonts.label": "Fuentes",
+  "fonts.tech": "Técnica",
+  "fonts.serif": "Títulos serif",
+  "fonts.legible": "Hiperlegible"
 }

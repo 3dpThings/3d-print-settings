@@ -4,6 +4,11 @@ All notable changes to this project are listed here. Versions follow [semantic v
 
 ## [Unreleased]
 
+- Display menu in the header with mode (system, light, dark), style and font pair.
+- New styles: High contrast (WCAG AAA text contrast) and Low vision (20 % larger text, thicker borders and focus outline, low-glare background).
+- New font pairs: serif headings (Source Serif 4 + Source Sans 3) and hyperlegible (Atkinson Hyperlegible Next + Mono).
+- All colours, sizes and fonts moved to `css/themes.css`, documented in `docs/THEMING.md`; the check script validates the styles listed in `js/config.js`.
+
 - Complete Bambu Lab, Polymaker and Sunlu catalogues: 91 new filaments (195 in total), including Polymaker G-Flex PETG, the Panchroma and Fiberon lines, HT-PLA, ABS Pro/Max and PolySmooth, and Sunlu's high-speed, PA and PC lines.
 - New material classes: HT-PLA, HT-PLA-GF, CoPE, PVB, glow-in-the-dark PETG, elastic PETG (PETG/TPU), PC-ABS and Warp-Free nylon (cool bed, no heated chamber).
 - New support materials: Polymaker PolySupport for PLA, PolySupport for PA12, PolyDissolve S1, and Sunlu PVA.

@@ -17,7 +17,7 @@ Pick a printer, a filament (for example *Sunlu PETG* or *Bambu Lab PA6-CF*) and 
 - **Live results**: everything recalculates as you change a selection.
 - **Exports**: full text sheet, OrcaSlicer / Bambu Studio filament profile (.json) and PrusaSlicer config (.ini).
 - **Your last 10 queries**, kept in your browser only.
-- **Light and dark theme**, following your system setting or chosen by hand.
+- **Display options**: light or dark (following your system or chosen by hand), a high-contrast style and a low-vision style with larger text, and three font pairs, including the hyperlegible Atkinson. Styles live in one file and are easy to edit: see [docs/THEMING.md](docs/THEMING.md).
 - **9 languages**: English, 中文, Deutsch, 日本語, Español, Français, Português, Italiano, 한국어.
 
 ## Run it locally
@@ -44,7 +44,8 @@ It validates the translations and the catalogue data, then runs the engine over 
 
 ```
 index.html              Markup; loads the scripts in order
-css/styles.css          Styles (light and dark theme)
+css/themes.css          Colours, sizes and fonts of every style (edit this to restyle)
+css/styles.css          Layout and components
 js/i18n.js              Translation loader and T() helper
 js/config.js            Site settings (repository URL for the footer links)
 js/data/                Catalogue: printers, filaments, material classes, print types, support materials
@@ -69,7 +70,7 @@ Please read the [Code of Conduct](CODE_OF_CONDUCT.md) before taking part.
 
 ## Privacy
 
-There's no back end, no account and no analytics. Your history and language choice stay in your browser's `localStorage`. The page loads its fonts from Google Fonts; self-hosting them is on the to-do list.
+There's no back end, no account and no analytics. Your history, language and display choices stay in your browser's `localStorage`. The page loads its fonts from Google Fonts; self-hosting them is on the to-do list.
 
 ## Licence and trademarks
 

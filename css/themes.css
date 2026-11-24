@@ -1,0 +1,138 @@
+/* ==========================================================================
+   3D Print Settings · visual styles and font pairs
+   --------------------------------------------------------------------------
+   Everything that defines the look of the app lives in this file: colours,
+   borders, text size and fonts. styles.css only uses these variables.
+
+   HOW TO ADD A STYLE
+   1. Copy one of the style blocks below (light + dark) and give it a new id,
+      for example [data-style="sepia"].
+   2. Every variable you set in the light block must also be set in the dark
+      block (otherwise the light value leaks into dark mode).
+   3. Add the id to `styles` in js/config.js so it appears in the Display menu.
+
+   HOW TO ADD A FONT PAIR
+   1. Add the families to the Google Fonts @import below (or self-host them
+      with @font-face).
+   2. Add a [data-fonts="your-id"] block at the end of this file.
+   3. Add the id to `fontPairs` in js/config.js.
+
+   Variables
+   --bg, --surface ............ page and panel backgrounds
+   --ink, --muted ............. main and secondary text
+   --line ..................... borders and separators
+   --accent, --accent-soft .... highlight colour and its pale background
+   --accent-ink ............... text drawn on top of --accent
+   --cool ..................... secondary highlight (temperature scale)
+   --crit/--warn/--info (+ -soft) alert colours and backgrounds
+   --ok ....................... success messages
+   --fs ....................... text size multiplier (1 = 100 %)
+   --lh ....................... body line height
+   --bw ....................... border width
+   --focus, --focus-w ......... keyboard focus outline colour and width
+   --radius ................... corner radius
+   --shadow ................... shadow of dropdowns and pop-ups
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600;700&family=Source+Sans+3:wght@400;500;600&family=Source+Code+Pro:wght@400;500;600&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Atkinson+Hyperlegible+Mono:wght@400;500;600&display=swap");
+
+/* ---------- Standard (default) ---------- */
+:root{
+  --bg:#eceef1; --surface:#f9fafb; --ink:#14181d; --muted:#586170; --line:#d3d8de;
+  --accent:#c94710; --accent-soft:#fbe5da; --accent-ink:#ffffff; --cool:#2a64a6;
+  --crit:#b42318; --crit-soft:#fde8e6; --warn:#8f5400; --warn-soft:#fcefd5;
+  --info:#285a93; --info-soft:#e4edf8; --ok:#2c7a4b;
+  --fs:1; --lh:1.5; --bw:1px; --focus:var(--accent); --focus-w:2px; --radius:6px;
+  --shadow:0 10px 28px rgba(0,0,0,.14);
+  color-scheme:light;
+}
+:root[data-mode="dark"]{
+  --bg:#111418; --surface:#191d22; --ink:#e6e9ed; --muted:#9aa3ae; --line:#2c333b;
+  --accent:#ff7a3d; --accent-soft:#3a2216; --accent-ink:#1a0d06; --cool:#6ea8ea;
+  --crit:#ff7266; --crit-soft:#3a1714; --warn:#f0b04a; --warn-soft:#352610;
+  --info:#86b5ee; --info-soft:#15263a; --ok:#5cc28a;
+  --shadow:0 10px 28px rgba(0,0,0,.5);
+  color-scheme:dark;
+}
+/* Without JavaScript the page still follows the system setting */
+@media (prefers-color-scheme: dark){
+  :root:not([data-mode]){
+    --bg:#111418; --surface:#191d22; --ink:#e6e9ed; --muted:#9aa3ae; --line:#2c333b;
+    --accent:#ff7a3d; --accent-soft:#3a2216; --accent-ink:#1a0d06; --cool:#6ea8ea;
+    --crit:#ff7266; --crit-soft:#3a1714; --warn:#f0b04a; --warn-soft:#352610;
+    --info:#86b5ee; --info-soft:#15263a; --ok:#5cc28a;
+    color-scheme:dark;
+  }
+}
+
+/* ---------- High contrast ----------
+   Near-black on white (and white on black), stronger borders and accents.
+   Text pairs meet WCAG AAA (7:1) where possible. */
+:root[data-style="contrast"]{
+  --bg:#ffffff; --surface:#ffffff; --ink:#000000; --muted:#30363d; --line:#6b737c;
+  --accent:#9c3300; --accent-soft:#ffe2d1; --accent-ink:#ffffff; --cool:#0b4a99;
+  --crit:#8f0d05; --crit-soft:#ffe1de; --warn:#5c3500; --warn-soft:#ffeccc;
+  --info:#0b3f80; --info-soft:#dde9fb; --ok:#0d5a2d;
+  --bw:1.5px; --focus:#0b4a99; --focus-w:3px;
+  --shadow:0 0 0 1.5px #000000, 0 10px 28px rgba(0,0,0,.2);
+}
+:root[data-style="contrast"][data-mode="dark"]{
+  --bg:#000000; --surface:#0a0a0a; --ink:#ffffff; --muted:#d6dbe0; --line:#8d969f;
+  --accent:#ffa06b; --accent-soft:#3d1d0b; --accent-ink:#000000; --cool:#8cc4ff;
+  --crit:#ff8f86; --crit-soft:#3d0f0b; --warn:#ffcc66; --warn-soft:#3a2700;
+  --info:#9ccaff; --info-soft:#0c2340; --ok:#7de0a6;
+  --bw:1.5px; --focus:#ffd24d; --focus-w:3px;
+  --shadow:0 0 0 1.5px #ffffff, 0 10px 28px rgba(0,0,0,.6);
+}
+
+/* ---------- Low vision ----------
+   Larger text (+20 %), more line spacing, thick borders and focus rings,
+   high-contrast colours on a slightly warm background to reduce glare. */
+:root[data-style="lowvision"]{
+  --bg:#f6f4ee; --surface:#fffdf8; --ink:#000000; --muted:#2b2f35; --line:#4d545c;
+  --accent:#8f2f00; --accent-soft:#ffe0cc; --accent-ink:#ffffff; --cool:#003d8f;
+  --crit:#8a0c04; --crit-soft:#ffdcd8; --warn:#553100; --warn-soft:#ffe9c2;
+  --info:#003a7a; --info-soft:#d9e6fa; --ok:#0b5229;
+  --fs:1.2; --lh:1.65; --bw:2px; --focus:#003d8f; --focus-w:4px; --radius:8px;
+  --shadow:0 0 0 2px #000000, 0 12px 30px rgba(0,0,0,.25);
+}
+:root[data-style="lowvision"][data-mode="dark"]{
+  --bg:#000000; --surface:#101010; --ink:#ffffff; --muted:#e8e8e8; --line:#b3b3b3;
+  --accent:#ffb37f; --accent-soft:#3f1f0a; --accent-ink:#000000; --cool:#9fd0ff;
+  --crit:#ff9a91; --crit-soft:#401210; --warn:#ffd27a; --warn-soft:#3d2a00;
+  --info:#a8d2ff; --info-soft:#0d2645; --ok:#8be8b1;
+  --fs:1.2; --lh:1.65; --bw:2px; --focus:#ffe066; --focus-w:4px; --radius:8px;
+  --shadow:0 0 0 2px #ffffff, 0 12px 30px rgba(0,0,0,.6);
+}
+/* Low vision: underline links and avoid very small labels */
+:root[data-style="lowvision"] a{text-decoration-thickness:2px;text-underline-offset:3px}
+
+/* ---------- Font pairs ----------
+   --font-display: headings · --font-body: text · --font-mono: numbers and labels.
+   --cjk is appended so Chinese, Japanese and Korean always have glyphs. */
+:root{
+  --cjk:"PingFang SC","Hiragino Sans","Hiragino Kaku Gothic ProN","Apple SD Gothic Neo","Microsoft YaHei","Yu Gothic","Malgun Gothic","Noto Sans CJK SC";
+}
+/* Technical (default): Chakra Petch + IBM Plex */
+:root, :root[data-fonts="tech"]{
+  --font-display:"Chakra Petch","Bahnschrift","Segoe UI",var(--cjk),sans-serif;
+  --font-body:"IBM Plex Sans","Segoe UI",system-ui,var(--cjk),sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+/* Chakra Petch has no CJK glyphs: those languages use the body font for headings */
+:root:not([data-fonts]):lang(zh-CN), :root:not([data-fonts]):lang(ja), :root:not([data-fonts]):lang(ko),
+:root[data-fonts="tech"]:lang(zh-CN), :root[data-fonts="tech"]:lang(ja), :root[data-fonts="tech"]:lang(ko){
+  --font-display:"IBM Plex Sans","Segoe UI",system-ui,var(--cjk),sans-serif;
+}
+/* Serif headings: Source Serif 4 for titles, Source Sans 3 for text */
+:root[data-fonts="serif"]{
+  --font-display:"Source Serif 4",Georgia,"Times New Roman",var(--cjk),serif;
+  --font-body:"Source Sans 3","Segoe UI",system-ui,var(--cjk),sans-serif;
+  --font-mono:"Source Code Pro",ui-monospace,Menlo,Consolas,monospace;
+}
+/* Hyperlegible: Atkinson Hyperlegible, designed for readers with low vision */
+:root[data-fonts="legible"]{
+  --font-display:"Atkinson Hyperlegible Next",Verdana,"Segoe UI",var(--cjk),sans-serif;
+  --font-body:"Atkinson Hyperlegible Next",Verdana,"Segoe UI",var(--cjk),sans-serif;
+  --font-mono:"Atkinson Hyperlegible Mono",ui-monospace,Menlo,Consolas,monospace;
+}

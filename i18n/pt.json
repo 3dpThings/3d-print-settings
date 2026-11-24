@@ -592,7 +592,7 @@
   "ft.trademarks": "Marcas e nomes de produtos pertencem aos seus donos; este projeto não é afiliado a nenhum fabricante.",
   "ft.repo": "Código-fonte",
   "ft.contribute": "Sugerir uma impressora ou filamento",
-  "theme.label": "Tema",
+  "theme.label": "Modo",
   "theme.system": "Sistema",
   "theme.light": "Claro",
   "theme.dark": "Escuro",
@@ -647,5 +647,14 @@
   "mt.TPU_AERO": [
     "TPU expansivo: mais temperatura significa mais espuma e peças mais macias e leves. Comece com fluxo de ≈ 0.6 e calibre na temperatura que vai usar.",
     "Imprima devagar, com pouca ou nenhuma retração, e mantenha seco; não é adequado para a maioria dos alimentadores tipo AMS."
-  ]
+  ],
+  "display.label": "Aparência",
+  "style.label": "Estilo",
+  "style.default": "Padrão",
+  "style.contrast": "Alto contraste",
+  "style.lowvision": "Baixa visão (texto maior)",
+  "fonts.label": "Fontes",
+  "fonts.tech": "Técnica",
+  "fonts.serif": "Títulos serifados",
+  "fonts.legible": "Hiperlegível"
 }

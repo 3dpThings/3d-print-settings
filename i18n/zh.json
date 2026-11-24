@@ -592,7 +592,7 @@
   "ft.trademarks": "品牌和产品名称归其各自所有者所有；本项目与任何制造商均无关联。",
   "ft.repo": "源代码",
   "ft.contribute": "建议添加打印机或耗材",
-  "theme.label": "主题",
+  "theme.label": "模式",
   "theme.system": "跟随系统",
   "theme.light": "浅色",
   "theme.dark": "深色",
@@ -647,5 +647,14 @@
   "mt.TPU_AERO": [
     "发泡 TPU：温度越高发泡越多，零件越软越轻。流量比从 ≈ 0.6 开始，并在实际使用的温度下校准。",
     "请慢速打印，少用或不用回抽，并保持干燥；不适合大多数 AMS 类送料系统。"
-  ]
+  ],
+  "display.label": "显示",
+  "style.label": "样式",
+  "style.default": "标准",
+  "style.contrast": "高对比度",
+  "style.lowvision": "低视力（更大字号）",
+  "fonts.label": "字体",
+  "fonts.tech": "技术风",
+  "fonts.serif": "衬线标题",
+  "fonts.legible": "超易读"
 }

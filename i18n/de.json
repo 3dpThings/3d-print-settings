@@ -592,7 +592,7 @@
   "ft.trademarks": "Marken- und Produktnamen gehören ihren Inhabern; dieses Projekt ist mit keinem Hersteller verbunden.",
   "ft.repo": "Quellcode",
   "ft.contribute": "Drucker oder Filament vorschlagen",
-  "theme.label": "Design",
+  "theme.label": "Modus",
   "theme.system": "System",
   "theme.light": "Hell",
   "theme.dark": "Dunkel",
@@ -647,5 +647,14 @@
   "mt.TPU_AERO": [
     "Schäumendes TPU: heißer bedeutet mehr Schaum, weichere und leichtere Teile. Mit einem Flussverhältnis von ≈ 0.6 beginnen und bei der gewünschten Temperatur kalibrieren.",
     "Langsam drucken, mit wenig oder keinem Rückzug, und trocken halten; für die meisten AMS-ähnlichen Zuführsysteme ungeeignet."
-  ]
+  ],
+  "display.label": "Darstellung",
+  "style.label": "Stil",
+  "style.default": "Standard",
+  "style.contrast": "Hoher Kontrast",
+  "style.lowvision": "Sehschwäche (größere Schrift)",
+  "fonts.label": "Schriften",
+  "fonts.tech": "Technisch",
+  "fonts.serif": "Serifen-Überschriften",
+  "fonts.legible": "Hyperlesbar"
 }
