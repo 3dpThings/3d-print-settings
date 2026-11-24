@@ -665,5 +665,7 @@
   "a.supSmall": "Le fibre o particelle di {sup} possono intasare un ugello da 0.25 mm o meno: per il supporto usa 0.4 mm o più.",
   "a.supLh": "L'altezza layer di {lh} mm è troppo spessa per l'ugello di supporto da {n} mm (max {max} mm): riduci l'altezza layer o usa un ugello di supporto più grande.",
   "a.supNozMixBbl": "Bambu Lab sta introducendo gradualmente le dimensioni di ugello miste sulla {model}: verifica che le tue versioni di Bambu Studio e del firmware lo consentano; altrimenti usa la stessa dimensione in entrambi.",
-  "nz.supExpBbl": "Ideale per il supporto: {n} mm, {t}. Puoi scegliere un'altra dimensione o tipo: le dimensioni miste sulla {model} richiedono Bambu Studio e firmware recenti."
+  "nz.supExpBbl": "Ideale per il supporto: {n} mm, {t}. Puoi scegliere un'altra dimensione o tipo: le dimensioni miste sulla {model} richiedono Bambu Studio e firmware recenti.",
+  "pt.p3c.swap": "I suoi 7 strumenti si cambiano in circa 6 secondi e può mescolare dimensioni di ugello nella stessa stampa: usare un supporto dedicato sulle interfacce, o uno strumento da 0.2 mm per i dettagli, costa pochissimo tempo.",
+  "pt.p3c.tpu": "Per TPU più morbidi di 90A usa il PrintTool opzionale da 2.85 mm alimentato dal bypass dell'AMS 3P: gestisce TPU fino a 75A con un flusso molto più alto del filamento da 1.75 mm."
 }

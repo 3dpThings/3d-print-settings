@@ -665,5 +665,7 @@
   "a.supSmall": "Las fibras o partículas de {sup} pueden atascar una boquilla de 0.25 mm o menos: usa 0.4 mm o más para el soporte.",
   "a.supLh": "La altura de capa de {lh} mm es demasiado gruesa para la boquilla de soporte de {n} mm (máx. {max} mm): baja la altura de capa o usa una boquilla de soporte más grande.",
   "a.supNozMixBbl": "Bambu Lab está desplegando la mezcla de tamaños de boquilla en la {model}: comprueba que tu versión de Bambu Studio y del firmware lo permiten; si no, usa el mismo tamaño en las dos.",
-  "nz.supExpBbl": "Ideal para el soporte: {n} mm, {t}. Puedes elegir otro tamaño o tipo: mezclar tamaños en la {model} requiere un Bambu Studio y un firmware recientes."
+  "nz.supExpBbl": "Ideal para el soporte: {n} mm, {t}. Puedes elegir otro tamaño o tipo: mezclar tamaños en la {model} requiere un Bambu Studio y un firmware recientes.",
+  "pt.p3c.swap": "Sus 7 herramientas se cambian en unos 6 segundos y puede mezclar tamaños de boquilla en una misma impresión, así que usar material de soporte específico en las interfaces, o una herramienta de 0.2 mm para los detalles, apenas añade tiempo.",
+  "pt.p3c.tpu": "Para TPU más blando que 90A, usa la PrintTool opcional de 2.85 mm alimentada por el bypass del AMS 3P: admite TPU de hasta 75A con mucho más flujo que el filamento de 1.75 mm."
 }
