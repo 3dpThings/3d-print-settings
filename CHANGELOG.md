@@ -4,6 +4,8 @@ All notable changes to this project are listed here. Versions follow [semantic v
 
 ## [Unreleased]
 
+- Completed the smaller filament brands: Prusament (PLA Blend, Blend Silk PLA, rPLA, PC, PETG Ultraglow, PVB, TPU 95A), Elegoo (Matte, Silk, Galaxy, Rapid PLA+, PLA-CF, PETG, PETG-CF/GF, Rapid TPU, ABS, ASA, PC, PAHT-CF), Creality (Hyper PLA-CF, CR-PLA, CR-PLA Matte, CR-Silk, CR-PETG, CR-ABS, HP-ASA, HP-TPU, CR-TPU, CR-Nylon, Hyper PA6-CF), Overture (Matte, Super PLA+, PLA Professional, Silk, Rock, Turbo, Easy, Air and Glow PLA, TPU, High Speed TPU, ABS, ASA, PC Professional, Easy Nylon), colorFabb (LW-PLA-HT, LW-ASA, PLA/PHA, XT, XT-CF20, nGen, nGen_FLEX, HT, PA-CF Low Warp, woodFill, bronzeFill, varioShore TPU, TPU 85A), Recreus (Filaflex 60A, 95 Foamy, PET-G HF, PET-G CF) and NinjaTek (NinjaFlex Edge, Chinchilla, Armadillo).
+
 - Added 19 printers from brands already in the catalogue: Bambu Lab H2S, P2S and A2L; Prusa CORE One L / L+ and CORE One+ INDX (the CORE One entry now also covers the CORE One+); Creality K2 Pro, K2, K1 Max, SparkX i7 and Hi; Elegoo Centauri Carbon 2; Anycubic Kobra X; Qidi Plus5, Q2 and Q2C; Flashforge AD5X, Adventurer 5M and 5M Pro; Voron Trident. Each comes with its nozzle types and the matching printer tips.
 
 - Renamed the "Car part" print type to "Car part / heat-resistant".
