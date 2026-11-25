@@ -139,7 +139,7 @@
   "prusa.c3": "Import with File > Import > Import Config, or copy the keys you need.",
   "type.mini.name": "Miniature figure",
   "type.mini.desc": "Wargaming, tabletop RPG, busts. Maximum detail.",
-  "type.car.name": "Car part",
+  "type.car.name": "Car part / heat-resistant",
   "type.car.desc": "Mounts, clips, trim. Withstands heat and vibration.",
   "type.deco.name": "Decor without visible lines",
   "type.deco.desc": "Vases, smooth figures. A surface without marked horizontal lines.",

@@ -139,7 +139,7 @@
   "prusa.c3": "Import über Datei > Importieren > Konfiguration importieren, oder kopiere nur die benötigten Schlüssel.",
   "type.mini.name": "Miniaturfigur",
   "type.mini.desc": "Tabletop, Rollenspiel, Büsten. Maximale Details.",
-  "type.car.name": "Autoteil",
+  "type.car.name": "Autoteil / hitzebeständig",
   "type.car.desc": "Halterungen, Clips, Blenden. Hält Hitze und Vibration aus.",
   "type.deco.name": "Deko ohne sichtbare Linien",
   "type.deco.desc": "Vasen, glatte Figuren. Oberfläche ohne deutliche horizontale Linien.",
