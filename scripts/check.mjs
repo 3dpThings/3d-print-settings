@@ -49,7 +49,7 @@ T = function(k, v){ if (!(k in EN)) __missing.add(k); return __T(k, v); };
 function __setLang(code, en, d){ EN = en; DICTS.en = en; DICTS[code] = d; DICT = d; LANG = LANGS.find(l => l.code === code) || LANGS[0]; }
 this.__api = {PRINTERS, FILAMENTS, CLASSES, TYPES, SUPPORTS, NOZZLE_TYPES, PRINTER_TIPS, NTYPES, LANGS,
   compute, checks, buildTips, paramGroups, buildTxt, buildOrca, buildOrcaSup, buildPrusa, idealNozzle, idealType, idealSupType,
-  idealLh, lhOptions, lhRange, supportOptions, multiTool, typesAt, getMissing: () => [...__missing], setLang: __setLang};`;
+  idealLh, lhOptions, lhRange, supportOptions, multiTool, typesAt, detectLang, getMissing: () => [...__missing], setLang: __setLang};`;
 try { vm.runInContext(src, ctx, {filename: 'engine-bundle.js'}); }
 catch(e){ console.error('The data/engine files failed to load:\n', e); process.exit(1); }
 const A = ctx.__api;
@@ -97,6 +97,14 @@ for (const [pid, conf] of Object.entries(A.PRINTER_TIPS)){
   if (conf.soak && !(conf.soak in en)) err(`tips.js › ${pid}: soak key "${conf.soak}" missing in en.json`);
   for (const tip of conf.tips || []) if (tip.key && !(tip.key in en)) err(`tips.js › ${pid}: tip key "${tip.key}" missing in en.json`);
 }
+
+/* ---------- 3a. Browser language detection ---------- */
+for (const [prefs, want] of [[['ca-ES','es','en'], 'ca'], [['es-MX'], 'es'], [['pt-PT'], 'pt'], [['zh-TW','en'], 'zh'],
+    [['nl-NL','de-DE'], 'de'], [['gl-ES'], 'es'], [['ca-ES-valencia'], 'ca'], [['ru-RU'], 'en'], [[], 'en']]){
+  const got = A.detectLang(prefs);
+  if (got !== want) err(`i18n.js › detectLang(${JSON.stringify(prefs)}) returned "${got}", expected "${want}"`);
+}
+for (const l of A.LANGS) if (!dicts[l.file]) err(`i18n.js › LANGS: "${l.code}" has no i18n/${l.file}.json`);
 
 /* ---------- 3b. Display styles and font pairs ---------- */
 {
