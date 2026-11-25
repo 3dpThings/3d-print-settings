@@ -337,12 +337,12 @@
     "The filament's Shore hardness rules: 95A feels like a shoe sole, 70–75A like a soft eraser."
   ],
   "tt.outdoor": [
-    "ASA or PC for outdoors; PLA warps in the sun and PETG fades under UV.",
+    "ASA (or ASA-CF) is the best choice outdoors; PETG and PCTG hold up but fade under UV, and PLA warps in the sun.",
     "4 or more walls and ≥ 30 % infill so water doesn't get in."
   ],
   "tt.big": [
     "If it doesn't fit, split the part and join it with printed pins or dowels.",
-    "Brim and, on an enclosed printer, a closed door to avoid warping on long parts.",
+    "Brim to stop long parts from warping. With ABS, ASA or PC keep the enclosure closed; with PLA, leave the door or lid open.",
     "Adaptive or lightning infill saves material without hurting the surface."
   ],
   "tt.water": [

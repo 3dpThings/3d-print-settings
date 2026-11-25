@@ -24,7 +24,7 @@ function compute(p, f, n, t, s, sn, nt, snt, lhSel){
   if (lhSel && lhSel >= lhMin-1e-9 && lhSel <= lhMax+1e-9) lh = r2(lhSel);
   const fl = n<=0.25 ? 0.12 : (n>=0.6 ? r2(n*0.5) : 0.2);
   const lwO = r2(n*1.05), lwI = r2(n*1.12), lwF = r2(n*1.25);
-  const walls = Math.max(2, Math.round(t.wallMM/lwI));
+  const walls = Math.max(t.minWalls || 2, Math.round(t.wallMM/lwI));
   const top = Math.max(3, Math.ceil(t.top/lh - 1e-9)), bottom = Math.max(3, Math.ceil(t.bottom/lh - 1e-9));
   const [nmin,nmax,nbase] = f.nozzle;
   let nz = clamp(nbase + t.dT, nmin, nmax), nzLimited = false;
@@ -58,6 +58,7 @@ function compute(p, f, n, t, s, sn, nt, snt, lhSel){
     first: Math.max(10, r5(Math.min(50*Math.max(0.6,p.speedF), maxSp*0.6, mvs/(fl*lwF)))),
     travel: r5(500*Math.max(0.5,p.speedF)),
   };
+  if (sp.outer > sp.inner) sp.outer = sp.inner;
   const fadj = c.fam==='PLA' ? Math.max(0,t.fan) : t.fan;
   const fmin = clamp(c.fan[0] + fadj, 0, 100);
   const fmax = clamp(c.fan[1] + fadj, fmin, 100);

@@ -155,7 +155,8 @@ function printerTips(x){
 function typeTips(x){
   const out = [];
   if (x.t.id==='mini'){
-    out.push(T(x.n > 0.25 ? 'tt.miniBig' : 'tt.miniSmall'));
+    if (x.n <= 0.25) out.push(T('tt.miniSmall'));
+    else if (x.p.nozzles.some(v => v <= 0.25)) out.push(T('tt.miniBig'));
     out.push(...TA('tt.mini'));
     if (multiTool(x.p) && !x.s) out.push(T('tt.miniDual'));
   } else out.push(...TA('tt.'+x.t.id));
