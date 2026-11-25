@@ -90,6 +90,38 @@ const PRINTER_TIPS = {
   'el-n4p': {tips:[ tp('bed','pt.n4p.bed') ]},
   'qd-plus4': {tips:[ tp('hotend','pt.plus4.hotend', x=>isFam(x,'PA','PC','PET','PPA','PPS')) ]},
   'voron-24': {soak:'pt.voron.soak', tips:[ tp('Klipper','pt.voron.fw') ]},
+  'bbl-h2s': {soak:'pt.bigbed.soak', tips:[
+    tp('hotend','pt.h2d.hotend', x=>isFam(x,'PA','PC','PET','PPA','PPS')),
+    tp('AMS','pt.tpuExtAms', softTpu),
+    tp('plate','pt.platePaPc', x=>isFam(x,'PA','PC','PET','PPA','PPS')),
+  ]},
+  'bbl-p2s': {tips:[
+    tp('nozzle','pt.cfStockHard', x=>x.c.cf),
+    tp('AMS','pt.tpuExtAms', softTpu),
+    tp('plate','pt.platePaPc', x=>isFam(x,'PA','PC','PET','PPA')),
+  ]},
+  'bbl-a2l': {tips:[ tp('calib','pt.a1.calib') ]},
+  'prusa-core1l': {soak:'pt.bigbed.soak', tips:[
+    tp('chamber','pt.core1.hot', hot),
+    tp('chamber','pt.core1.cool', x=>!hot(x)),
+  ]},
+  'prusa-indx': {tips:[
+    tp('chamber','pt.core1.hot', hot),
+    tp('chamber','pt.core1.cool', x=>!hot(x)),
+  ]},
+  'cr-k2pro': {tips:[ tp('CFS','pt.k2p.cfs', softTpu) ]},
+  'cr-k2': {tips:[ tp('CFS','pt.k2p.cfs', softTpu) ]},
+  'cr-k1max': {tips:[ tp('nozzle','pt.cfStockHard', x=>x.c.cf) ]},
+  'cr-sparkx-i7': {tips:[ tp('nozzle','pt.cfStockHard', x=>x.c.cf) ]},
+  'el-cc2': {tips:[ tp('nozzle','pt.cfStockHard', x=>x.c.cf) ]},
+  'ac-kx': {tips:[ tp('nozzle','pt.cfStockHard', x=>x.c.cf) ]},
+  'qd-plus5': {tips:[ tp('hotend','pt.plus4.hotend', x=>isFam(x,'PA','PC','PET','PPA','PPS')) ]},
+  'qd-q2': {tips:[ tp('hotend','pt.plus4.hotend', x=>isFam(x,'PA','PC','PET','PPA','PPS')) ]},
+  'qd-q2c': {tips:[
+    tp('nozzle','pt.cfStockHard', x=>x.c.cf),
+    tp('hotend','pt.plus4.hotend', x=>isFam(x,'PA','PC','PET','PPA','PPS')),
+  ]},
+  'voron-trident': {soak:'pt.voron.soak', tips:[ tp('Klipper','pt.voron.fw') ]},
 };
 // Tags: translated when a tag.<x> key exists; otherwise (AMS, CFS, Bowden, Klipper) shown as is
 const tagText = tag => (DICT['tag.'+tag] ?? EN['tag.'+tag]) ?? tag;

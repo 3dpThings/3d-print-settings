@@ -4,6 +4,8 @@ All notable changes to this project are listed here. Versions follow [semantic v
 
 ## [Unreleased]
 
+- Added 19 printers from brands already in the catalogue: Bambu Lab H2S, P2S and A2L; Prusa CORE One L / L+ and CORE One+ INDX (the CORE One entry now also covers the CORE One+); Creality K2 Pro, K2, K1 Max, SparkX i7 and Hi; Elegoo Centauri Carbon 2; Anycubic Kobra X; Qidi Plus5, Q2 and Q2C; Flashforge AD5X, Adventurer 5M and 5M Pro; Voron Trident. Each comes with its nozzle types and the matching printer tips.
+
 - Renamed the "Car part" print type to "Car part / heat-resistant".
 
 - Added Voxel (VOXELPLA) filaments: PLA+ HS, Galaxy PLA+ HS, PETG+ HS and Galaxy PETG+ HS.
