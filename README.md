@@ -17,7 +17,7 @@ Pick a printer, a filament (for example *Sunlu PETG* or *Bambu Lab PA6-CF*) and 
 - **Live results**: everything recalculates as you change a selection.
 - **Exports**: full text sheet, OrcaSlicer / Bambu Studio filament profile (.json) and PrusaSlicer config (.ini).
 - **Your last 10 queries**, kept in your browser only.
-- **Display options**: light or dark (following your system or chosen by hand), a high-contrast style and a low-vision style with larger text, and three font pairs, including the hyperlegible Atkinson. Styles live in one file and are easy to edit: see [docs/THEMING.md](docs/THEMING.md).
+- **Display options**: light or dark (following your system or chosen by hand), a high-contrast style and a low-vision style with larger text, Synthwave and Monokai styles, and five font pairs, including the hyperlegible Atkinson and an 8-bit pixel pair. Styles live in one file and are easy to edit: see [docs/THEMING.md](docs/THEMING.md).
 - **9 languages**: English, 中文, Deutsch, 日本語, Español, Français, Português, Italiano, 한국어.
 
 ## Run it locally
