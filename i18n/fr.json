@@ -139,7 +139,7 @@
   "prusa.c3": "Importez via Fichier > Importer > Importer la configuration, ou copiez les clés dont vous avez besoin.",
   "type.mini.name": "Figurine miniature",
   "type.mini.desc": "Wargame, jeu de rôle, bustes. Détail maximal.",
-  "type.car.name": "Pièce automobile",
+  "type.car.name": "Pièce automobile / résistante à la chaleur",
   "type.car.desc": "Supports, clips, enjoliveurs. Résiste à la chaleur et aux vibrations.",
   "type.deco.name": "Déco sans lignes visibles",
   "type.deco.desc": "Vases, figurines lisses. Surface sans lignes horizontales marquées.",

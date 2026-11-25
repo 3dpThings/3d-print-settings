@@ -139,7 +139,7 @@
   "prusa.c3": "通过 文件 > 导入 > 导入配置 导入，或只复制需要的键。",
   "type.mini.name": "微缩模型",
   "type.mini.desc": "战棋、桌面角色扮演、胸像。追求极致细节。",
-  "type.car.name": "汽车零件",
+  "type.car.name": "汽车零件 / 耐热",
   "type.car.desc": "支架、卡扣、饰件。耐热、耐振动。",
   "type.deco.name": "无明显层纹的装饰品",
   "type.deco.desc": "花瓶、光滑摆件。表面没有明显的水平纹路。",

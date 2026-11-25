@@ -139,7 +139,7 @@
   "prusa.c3": "Importa con Archivo > Importar > Importar configuración, o copia las claves que necesites.",
   "type.mini.name": "Figura en miniatura",
   "type.mini.desc": "Wargames, rol, bustos. Máximo detalle.",
-  "type.car.name": "Pieza para coche",
+  "type.car.name": "Pieza para coche / resistente al calor",
   "type.car.desc": "Soportes, clips, embellecedores. Aguanta calor y vibración.",
   "type.deco.name": "Decoración sin líneas visibles",
   "type.deco.desc": "Jarrones, figuras lisas. Superficie sin líneas horizontales marcadas.",

@@ -4,6 +4,8 @@ All notable changes to this project are listed here. Versions follow [semantic v
 
 ## [Unreleased]
 
+- Renamed the "Car part" print type to "Car part / heat-resistant".
+
 - Added Voxel (VOXELPLA) filaments: PLA+ HS, Galaxy PLA+ HS, PETG+ HS and Galaxy PETG+ HS.
 
 - Added the Bambu Lab P3C (7-tool changer, enclosed without chamber heating, 300 °C hardened 0.2–0.8 mm nozzles, mixed nozzle sizes), with tips for tool swaps and soft TPU.
