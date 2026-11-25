@@ -8,11 +8,27 @@ const LANGS = [
   {code:'de', file:'de',   locale:'de-DE', name:'Deutsch'},
   {code:'ja', file:'ja',   locale:'ja-JP', name:'日本語'},
   {code:'es', file:'es',   locale:'es-ES', name:'Español'},
+  {code:'ca', file:'ca',   locale:'ca-ES', name:'Català'},
   {code:'fr', file:'fr',   locale:'fr-FR', name:'Français'},
   {code:'pt', file:'pt',   locale:'pt-BR', name:'Português'},
   {code:'it', file:'it',   locale:'it-IT', name:'Italiano'},
   {code:'ko', file:'ko',   locale:'ko-KR', name:'한국어'},
 ];
+/* Languages with no translation of their own that should fall back to another one
+   rather than to English (Galician and Basque speakers usually read Spanish). */
+const LANG_FALLBACK = {gl:'es', eu:'es'};
+
+/* First visit: pick the first of the browser's preferred languages that the app has.
+   prefs is the navigator.languages list (e.g. ["ca-ES", "es", "en-US"]). */
+function detectLang(prefs){
+  for (const tag of prefs || []){
+    const base = String(tag).toLowerCase().split(/[-_]/)[0];
+    const code = LANGS.some(l => l.code === base) ? base : LANG_FALLBACK[base];
+    if (code) return code;
+  }
+  return 'en';
+}
+
 let EN = {};            // English is the base language and the fallback for missing keys
 const DICTS = {};
 let LANG = LANGS[0];

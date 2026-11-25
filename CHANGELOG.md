@@ -4,6 +4,9 @@ All notable changes to this project are listed here. Versions follow [semantic v
 
 ## [Unreleased]
 
+- Added Catalan (Català) as the tenth language.
+- On the first visit the app opens in the browser's language when it is available (otherwise English); choosing a language in the selector still overrides it and is remembered.
+
 - Added two display styles, Synthwave (80's look: Memphis in light mode, neon synthwave in dark mode) and Monokai (the Sublime Text colour scheme), and two font pairs: 80's (Audiowide, Exo 2, Share Tech Mono) and pixel (Press Start 2P titles, Noto Sans Mono text).
 
 - Completed the smaller filament brands: Prusament (PLA Blend, Blend Silk PLA, rPLA, PC, PETG Ultraglow, PVB, TPU 95A), Elegoo (Matte, Silk, Galaxy, Rapid PLA+, PLA-CF, PETG, PETG-CF/GF, Rapid TPU, ABS, ASA, PC, PAHT-CF), Creality (Hyper PLA-CF, CR-PLA, CR-PLA Matte, CR-Silk, CR-PETG, CR-ABS, HP-ASA, HP-TPU, CR-TPU, CR-Nylon, Hyper PA6-CF), Overture (Matte, Super PLA+, PLA Professional, Silk, Rock, Turbo, Easy, Air and Glow PLA, TPU, High Speed TPU, ABS, ASA, PC Professional, Easy Nylon), colorFabb (LW-PLA-HT, LW-ASA, PLA/PHA, XT, XT-CF20, nGen, nGen_FLEX, HT, PA-CF Low Warp, woodFill, bronzeFill, varioShore TPU, TPU 85A), Recreus (Filaflex 60A, 95 Foamy, PET-G HF, PET-G CF) and NinjaTek (NinjaFlex Edge, Chinchilla, Armadillo).

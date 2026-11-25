@@ -140,14 +140,18 @@ $('fonts').addEventListener('change', e => setFonts(e.target.value));
 document.addEventListener('click', e => { const m = $('displayMenu'); if (m.open && !m.contains(e.target)) m.open = false; });
 document.addEventListener('keydown', e => { const m = $('displayMenu'); if (e.key === 'Escape' && m.open){ m.open = false; m.querySelector('summary').focus(); } });
 
-/* Start-up: load English (and the saved language) before drawing anything. */
+/* Start-up: load English (and the user's language) before drawing anything.
+   The language is the one chosen in the selector, or, until the user picks one,
+   the first of the browser's preferred languages that the app has. */
 async function boot(){
   let saved = null;
   try { saved = localStorage.getItem(LS_LANG); } catch(e){}
+  if (!LANGS.some(l => l.code===saved)) saved = null;
+  const code = saved || detectLang(navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language]);
   try { EN = await loadDict('en'); DICT = EN; }
   catch(e){ console.error(e); document.body.classList.add('boot-failed'); $('bootError').hidden = false; return; }
-  if (saved && saved !== 'en' && LANGS.some(l => l.code===saved)){
-    try { DICT = await loadDict(saved); LANG = LANGS.find(l => l.code===saved); } catch(e){ console.warn(e); }
+  if (code !== 'en'){
+    try { DICT = await loadDict(code); LANG = LANGS.find(l => l.code===code); } catch(e){ console.warn(e); }
   }
   fillSelect($('lang'), LANGS.map(l => [l.code, l.name]), LANG.code);
   fillThemeSelect();
