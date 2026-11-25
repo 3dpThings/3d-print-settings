@@ -34,7 +34,7 @@
    --shadow ................... shadow of dropdowns and pop-ups
    ========================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600;700&family=Source+Sans+3:wght@400;500;600&family=Source+Code+Pro:wght@400;500;600&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Atkinson+Hyperlegible+Mono:wght@400;500;600&family=Audiowide&family=Exo+2:wght@400;500;600;700&family=Share+Tech+Mono&family=Press+Start+2P&family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600;700&family=Source+Sans+3:wght@400;500;600&family=Source+Code+Pro:wght@400;500;600&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Atkinson+Hyperlegible+Mono:wght@400;500;600&family=Audiowide&family=Exo+2:wght@400;500;600;700&family=Share+Tech+Mono&family=Press+Start+2P&family=Noto+Sans+Mono:wght@400;500;600&display=swap");
 
 /* ---------- Standard (default) ---------- */
 :root{
@@ -201,13 +201,13 @@
 :root[data-fonts="eighties"]:lang(zh-CN), :root[data-fonts="eighties"]:lang(ja), :root[data-fonts="eighties"]:lang(ko){
   --font-display:"Exo 2","Segoe UI",system-ui,var(--cjk),sans-serif;
 }
-/* Old school coder: Press Start 2P (8-bit pixel) titles, VT323 (terminal) for
-   text and numbers. Both pixel fonts have very different letter sizes, so
-   font-size-adjust brings them to the same visual size as the other pairs. */
+/* Old school coder: Press Start 2P (8-bit pixel) titles, Noto Sans Mono for
+   text and numbers. The pixel font has very large letters, so font-size-adjust
+   brings the titles down to the same visual size as the other pairs. */
 :root[data-fonts="pixel"]{
   --font-display:"Press Start 2P",var(--cjk),ui-monospace,monospace;
-  --font-body:"VT323",ui-monospace,Menlo,Consolas,var(--cjk),monospace;
-  --font-mono:"VT323",ui-monospace,Menlo,Consolas,monospace;
-  font-size-adjust:0.5;
+  --font-body:"Noto Sans Mono",ui-monospace,Menlo,Consolas,var(--cjk),monospace;
+  --font-mono:"Noto Sans Mono",ui-monospace,Menlo,Consolas,monospace;
 }
-:root[data-fonts="pixel"] h1, :root[data-fonts="pixel"] h2, :root[data-fonts="pixel"] h3{letter-spacing:0;line-height:1.35}
+:root[data-fonts="pixel"] h1, :root[data-fonts="pixel"] h2, :root[data-fonts="pixel"] h3{letter-spacing:0;line-height:1.35;font-size-adjust:0.5}
+:root[data-fonts="pixel"] .go, :root[data-fonts="pixel"] .display > summary::before{font-size-adjust:0.5}

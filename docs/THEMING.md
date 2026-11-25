@@ -28,7 +28,7 @@ Users choose the mode (system, light or dark), the style and the font pair in th
 | `serif` | Source Serif 4 | Source Sans 3 | Source Code Pro |
 | `legible` | Atkinson Hyperlegible Next | Atkinson Hyperlegible Next | Atkinson Hyperlegible Mono |
 | `eighties` | Audiowide | Exo 2 | Share Tech Mono |
-| `pixel` | Press Start 2P | VT323 | VT323 |
+| `pixel` | Press Start 2P | Noto Sans Mono | Noto Sans Mono |
 
 Atkinson Hyperlegible was designed by the Braille Institute for readers with low vision: similar letters (I, l, 1; O, 0) are clearly different.
 
