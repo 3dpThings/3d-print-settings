@@ -17,6 +17,8 @@ Users choose the mode (system, light or dark), the style and the font pair in th
 | `default` | Standard | The original palette. |
 | `contrast` | High contrast | Near-black on white (white on black in dark mode), darker secondary text, stronger borders and a thicker focus outline. Text meets WCAG AAA contrast (7:1). |
 | `lowvision` | Low vision | Everything in high contrast, plus text 20 % larger, more line spacing, 2 px borders, a 4 px focus outline and a warm, low-glare background in light mode. |
+| `synthwave` | Synthwave | 80's look. Light mode in Memphis style (white panels, hot magenta and teal, hard offset shadows); dark mode in synthwave style (deep purple, neon pink and cyan, sunset gradient and a neon title). |
+| `monokai` | Monokai | The Monokai colour scheme of Sublime Text: charcoal background with cyan-blue highlights, purple numbers, green labels and yellow/orange alerts in dark mode, and a light version with the same hues darkened for contrast. |
 
 ## Built-in font pairs
 
@@ -25,6 +27,8 @@ Users choose the mode (system, light or dark), the style and the font pair in th
 | `tech` | Chakra Petch | IBM Plex Sans | IBM Plex Mono |
 | `serif` | Source Serif 4 | Source Sans 3 | Source Code Pro |
 | `legible` | Atkinson Hyperlegible Next | Atkinson Hyperlegible Next | Atkinson Hyperlegible Mono |
+| `eighties` | Audiowide | Exo 2 | Share Tech Mono |
+| `pixel` | Press Start 2P | VT323 | VT323 |
 
 Atkinson Hyperlegible was designed by the Braille Institute for readers with low vision: similar letters (I, l, 1; O, 0) are clearly different.
 

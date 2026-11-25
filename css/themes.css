@@ -34,7 +34,7 @@
    --shadow ................... shadow of dropdowns and pop-ups
    ========================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600;700&family=Source+Sans+3:wght@400;500;600&family=Source+Code+Pro:wght@400;500;600&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Atkinson+Hyperlegible+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600;700&family=Source+Sans+3:wght@400;500;600&family=Source+Code+Pro:wght@400;500;600&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Atkinson+Hyperlegible+Mono:wght@400;500;600&family=Audiowide&family=Exo+2:wght@400;500;600;700&family=Share+Tech+Mono&family=Press+Start+2P&family=VT323&display=swap");
 
 /* ---------- Standard (default) ---------- */
 :root{
@@ -104,6 +104,62 @@
   --fs:1.2; --lh:1.65; --bw:2px; --focus:#ffe066; --focus-w:4px; --radius:8px;
   --shadow:0 0 0 2px #ffffff, 0 12px 30px rgba(0,0,0,.6);
 }
+/* ---------- Synthwave ----------
+   80's look. Light: Memphis design (white panels, hot magenta and teal, hard offset shadows).
+   Dark: synthwave (deep purple night, neon pink and cyan, soft glow). */
+:root[data-style="synthwave"]{
+  --bg:#fdeef6; --surface:#ffffff; --ink:#241038; --muted:#5d4a72; --line:#d8c4e8;
+  --accent:#c2006e; --accent-soft:#ffe1f1; --accent-ink:#ffffff; --cool:#00808a;
+  --crit:#b0122e; --crit-soft:#ffe2e7; --warn:#8a5200; --warn-soft:#fff0c9;
+  --info:#2c45b8; --info-soft:#e4e8ff; --ok:#167a48;
+  --bw:1.5px; --focus:#00808a; --focus-w:3px; --radius:10px;
+  --shadow:5px 5px 0 #2ccfd6, 0 10px 26px rgba(36,16,56,.16);
+}
+:root[data-style="synthwave"][data-mode="dark"]{
+  --bg:#130926; --surface:#1e0f38; --ink:#f6eaff; --muted:#bba6d8; --line:#432a6e;
+  --accent:#ff4fb0; --accent-soft:#3b1145; --accent-ink:#1a0018; --cool:#36e2ec;
+  --crit:#ff6d81; --crit-soft:#3e0f20; --warn:#ffc94d; --warn-soft:#3a2a0a;
+  --info:#86b4ff; --info-soft:#18214c; --ok:#5cf2a5;
+  --bw:1.5px; --focus:#36e2ec; --focus-w:3px; --radius:10px;
+  --shadow:0 0 0 1px rgba(255,79,176,.4), 0 0 22px rgba(255,79,176,.25), 0 12px 30px rgba(0,0,0,.6);
+}
+/* Synthwave extras: sunset gradient behind the page and neon title in dark mode */
+:root[data-style="synthwave"][data-mode="dark"] body{
+  background:linear-gradient(180deg,#130926 0%,#1c0b33 55%,#3a0f45 100%) fixed;
+}
+:root[data-style="synthwave"][data-mode="dark"] .brand h1 b{
+  text-shadow:0 0 6px rgba(255,79,176,.8), 0 0 18px rgba(255,79,176,.45);
+}
+
+/* ---------- Monokai ----------
+   Dark: the Monokai colour scheme of Sublime Text (charcoal background,
+   cyan-blue highlights, purple, green, yellow and orange). Light: the same
+   hues darkened for contrast on a cream background. */
+:root[data-style="monokai"]{
+  --bg:#efebe2; --surface:#fbf9f4; --ink:#272822; --muted:#5e594a; --line:#d6cfbf;
+  --accent:#11698a; --accent-soft:#dceff5; --accent-ink:#ffffff; --cool:#11698a;
+  --crit:#b8321a; --crit-soft:#fde7df; --warn:#875c00; --warn-soft:#f8eecb;
+  --info:#6a45c9; --info-soft:#ece6fb; --ok:#3b7a12;
+  --focus:#6a45c9; --focus-w:2px; --radius:4px;
+  --shadow:0 10px 28px rgba(39,40,34,.16);
+}
+:root[data-style="monokai"][data-mode="dark"]{
+  --bg:#1e1f1c; --surface:#272822; --ink:#f8f8f2; --muted:#a8a38c; --line:#49483e;
+  --accent:#66d9ef; --accent-soft:#1d3439; --accent-ink:#1e1f1c; --cool:#66d9ef;
+  --crit:#fd971f; --crit-soft:#3a2a16; --warn:#e6db74; --warn-soft:#36341f;
+  --info:#ae81ff; --info-soft:#2c2640; --ok:#a6e22e;
+  --focus:#ae81ff; --focus-w:2px; --radius:4px;
+  --shadow:0 10px 28px rgba(0,0,0,.55);
+}
+/* Monokai extras: a touch of syntax highlighting (purple numbers, green labels)
+   and a temperature scale that goes from cyan to yellow and orange, because
+   the accent here is blue rather than a warm colour. */
+:root[data-style="monokai"]{--mk-num:#6a45c9; --mk-label:#3b7a12}
+:root[data-style="monokai"][data-mode="dark"]{--mk-num:#ae81ff; --mk-label:#a6e22e}
+:root[data-style="monokai"] .step{color:var(--mk-num)}
+:root[data-style="monokai"] .types .tm b{color:var(--mk-label)}
+:root[data-style="monokai"] .track .rail{background:linear-gradient(90deg,var(--cool),var(--warn) 55%,var(--crit))}
+
 /* Low vision: underline links and avoid very small labels */
 :root[data-style="lowvision"] a{text-decoration-thickness:2px;text-underline-offset:3px}
 
@@ -136,3 +192,22 @@
   --font-body:"Atkinson Hyperlegible Next",Verdana,"Segoe UI",var(--cjk),sans-serif;
   --font-mono:"Atkinson Hyperlegible Mono",ui-monospace,Menlo,Consolas,monospace;
 }
+/* 80's: Audiowide titles, Exo 2 text, Share Tech Mono numbers */
+:root[data-fonts="eighties"]{
+  --font-display:"Audiowide","Bahnschrift",var(--cjk),sans-serif;
+  --font-body:"Exo 2","Segoe UI",system-ui,var(--cjk),sans-serif;
+  --font-mono:"Share Tech Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+:root[data-fonts="eighties"]:lang(zh-CN), :root[data-fonts="eighties"]:lang(ja), :root[data-fonts="eighties"]:lang(ko){
+  --font-display:"Exo 2","Segoe UI",system-ui,var(--cjk),sans-serif;
+}
+/* Old school coder: Press Start 2P (8-bit pixel) titles, VT323 (terminal) for
+   text and numbers. Both pixel fonts have very different letter sizes, so
+   font-size-adjust brings them to the same visual size as the other pairs. */
+:root[data-fonts="pixel"]{
+  --font-display:"Press Start 2P",var(--cjk),ui-monospace,monospace;
+  --font-body:"VT323",ui-monospace,Menlo,Consolas,var(--cjk),monospace;
+  --font-mono:"VT323",ui-monospace,Menlo,Consolas,monospace;
+  font-size-adjust:0.5;
+}
+:root[data-fonts="pixel"] h1, :root[data-fonts="pixel"] h2, :root[data-fonts="pixel"] h3{letter-spacing:0;line-height:1.35}

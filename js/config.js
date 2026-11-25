@@ -12,6 +12,8 @@ const CONFIG = {
     {id:'default',   label:'style.default'},
     {id:'contrast',  label:'style.contrast'},
     {id:'lowvision', label:'style.lowvision'},
+    {id:'synthwave', label:'style.synthwave'},
+    {id:'monokai',   label:'style.monokai'},
   ],
 
   // Font pairs shown in the Display menu. Each id needs a [data-fonts="id"] block in css/themes.css.
@@ -19,5 +21,7 @@ const CONFIG = {
     {id:'tech',    label:'fonts.tech'},
     {id:'serif',   label:'fonts.serif'},
     {id:'legible', label:'fonts.legible'},
+    {id:'eighties',label:'fonts.eighties'},
+    {id:'pixel',   label:'fonts.pixel'},
   ],
 };
