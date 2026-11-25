@@ -337,12 +337,12 @@
     "Die Shore-Härte des Filaments entscheidet: 95A fühlt sich an wie eine Schuhsohle, 70–75A wie ein weicher Radiergummi."
   ],
   "tt.outdoor": [
-    "ASA oder PC für draußen; PLA verzieht sich in der Sonne, PETG bleicht unter UV aus.",
+    "ASA (oder ASA-CF) ist draußen die beste Wahl; PETG und PCTG halten, verblassen aber unter UV, und PLA verformt sich in der Sonne.",
     "4 oder mehr Wände und ≥ 30 % Füllung, damit kein Wasser eindringt."
   ],
   "tt.big": [
     "Wenn es nicht passt, teile das Teil und verbinde es mit gedruckten Stiften oder Dübeln.",
-    "Brim und – bei geschlossenem Drucker – geschlossene Tür, um Verzug bei langen Teilen zu vermeiden.",
+    "Brim, damit sich lange Teile nicht verziehen. Bei ABS, ASA oder PC das Gehäuse geschlossen halten; bei PLA Tür oder Deckel offen lassen.",
     "Adaptive oder Blitz-Füllung spart Material, ohne die Oberfläche zu verschlechtern."
   ],
   "tt.water": [

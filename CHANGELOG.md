@@ -39,6 +39,14 @@ All notable changes to this project are listed here. Versions follow [semantic v
 - Light/dark theme selector (System, Light, Dark) in the header; System follows the operating system setting.
 - Wide screens: sections 01–04 come first again, with Printer and Filament side by side, and the settings below.
 
+### Fixed
+- Quick prototype and large part now suggest a regular high-flow nozzle for non-abrasive filaments when the printer has both regular and hardened high-flow nozzles (hardened is kept for abrasive filaments or when it is the only high-flow option).
+- The outer wall speed is never higher than the inner wall speed (it happened when the speed was limited by the hotend's flow, with 0.6 mm nozzles).
+- Outdoor and watertight parts keep at least 4 walls, and large parts at least 3, whatever the nozzle; with a 0.6 mm nozzle they used to get 2–3 walls, fewer than the tips recommend.
+- Miniature figure: the tip that recommends a 0.2–0.25 mm nozzle only appears on printers that accept one.
+- Outdoor tip no longer recommends PC (it yellows and turns brittle under UV); ASA / ASA-CF first, PETG and PCTG as alternatives.
+- Large part tip: closed enclosure only for ABS, ASA or PC; with PLA the door or lid should stay open.
+
 ## [1.0.0] - 2026-11-23
 
 First public release.

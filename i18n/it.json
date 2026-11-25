@@ -337,12 +337,12 @@
     "Comanda la durezza Shore del filamento: 95A è come una suola, 70–75A come una gomma morbida."
   ],
   "tt.outdoor": [
-    "ASA o PC per l'esterno; il PLA si deforma al sole e il PETG scolorisce con gli UV.",
+    "L'ASA (o ASA-CF) è la scelta migliore all'aperto; PETG e PCTG resistono ma sbiadiscono con i raggi UV, e il PLA si deforma al sole.",
     "4 o più pareti e riempimento ≥ 30 % perché non entri acqua."
   ],
   "tt.big": [
     "Se non ci sta, dividi il pezzo e uniscilo con perni o spine stampate.",
-    "Brim e, su stampante chiusa, sportello chiuso per evitare il warping nei pezzi lunghi.",
+    "Brim per evitare che i pezzi lunghi si deformino. Con ABS, ASA o PC tieni chiusa la stampante; con il PLA lascia aperti lo sportello o il coperchio.",
     "Riempimento adattivo o a fulmine: risparmia materiale senza peggiorare la superficie."
   ],
   "tt.water": [

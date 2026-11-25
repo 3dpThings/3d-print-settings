@@ -35,7 +35,7 @@ function idealType(p, f, t, n){
   const fast = t && (t.id==='draft' || t.id==='big') && c.fam!=='TPU' && n >= 0.4;
   let order;
   if (c.cf || c.abr) order = fast ? ['hfhard','hard'] : ['hard','hfhard'];
-  else if (fast) order = ['hfhard','hf', p.nstock, 'hard','std'];
+  else if (fast) order = ['hf','hfhard', p.nstock, 'hard','std'];
   else if (c.fam==='TPU') order = [p.nstock==='hf' ? 'std' : p.nstock, p.nstock==='hfhard' ? 'hard' : p.nstock, 'std','hard','hf','hfhard'];
   else order = [p.nstock, 'std','hard','hf','hfhard'];
   return order.find(k => avail.includes(k)) || avail[0];

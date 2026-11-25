@@ -337,12 +337,12 @@
     "A dureza Shore do filamento manda: 95A parece sola de sapato, 70–75A parece borracha macia."
   ],
   "tt.outdoor": [
-    "ASA ou PC para área externa; o PLA deforma no sol e o PETG desbota com UV.",
+    "ASA (ou ASA-CF) é a melhor escolha para exterior; PETG e PCTG aguentam, mas desbotam com UV, e o PLA deforma ao sol.",
     "4 ou mais paredes e preenchimento ≥ 30 % para não entrar água."
   ],
   "tt.big": [
     "Se não couber, divida a peça e una com pinos ou cavilhas impressos.",
-    "Brim e, em impressora fechada, porta fechada para evitar empenamento em peças compridas.",
+    "Brim para que as peças compridas não empenem. Com ABS, ASA ou PC, mantenha a impressora fechada; com PLA, deixe a porta ou a tampa abertas.",
     "Preenchimento adaptativo ou relâmpago economiza material sem prejudicar a superfície."
   ],
   "tt.water": [

@@ -337,12 +337,12 @@
     "La dureté Shore du filament décide : le 95A rappelle une semelle, le 70–75A une gomme souple."
   ],
   "tt.outdoor": [
-    "ASA ou PC pour l'extérieur ; le PLA se déforme au soleil et le PETG pâlit sous les UV.",
+    "L'ASA (ou ASA-CF) est le meilleur choix en extérieur ; le PETG et le PCTG tiennent mais se décolorent aux UV, et le PLA se déforme au soleil.",
     "4 parois ou plus et ≥ 30 % de remplissage pour que l'eau n'entre pas."
   ],
   "tt.big": [
     "Si elle ne tient pas, découpez la pièce et assemblez-la avec des goupilles ou chevilles imprimées.",
-    "Bordure et, sur une imprimante fermée, porte fermée pour éviter le warping sur les pièces longues.",
+    "Une bordure (brim) pour que les pièces longues ne se décollent pas. Avec l'ABS, l'ASA ou le PC, gardez l'enceinte fermée ; avec le PLA, laissez la porte ou le capot ouvert.",
     "Remplissage adaptatif ou éclair : économise de la matière sans nuire à la surface."
   ],
   "tt.water": [
